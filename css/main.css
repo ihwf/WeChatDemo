@@ -1,0 +1,33 @@
+.mui-bar-nav{
+	background-color: #333333;
+	box-shadow: none;
+	z-index: 1000;
+}
+.mui-bar .mui-title{
+	color: white;
+	text-align: left;
+	left: 10px;
+}
+.mui-bar-nav a{
+	color: white;
+	text-indent: 1em;
+	
+}
+.mui-bar-nav.mui-bar .mui-icon {
+    padding-right: 25px;
+}
+.mui-active span{
+	color: green;
+}
+.mui-table-view::before {
+    height: 0px;
+}
+.mui-table-view::after {
+    height: 0px;
+}
+.mui-table-view-cell::after {
+    left: 0;
+}
+.mui-content > .mui-table-view:first-child {
+    margin-top: 0px;
+}

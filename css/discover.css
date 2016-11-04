@@ -1,0 +1,27 @@
+.mui-table-view{
+	margin-top: 20px;
+}
+.mui-media-body{
+	height: 40;
+    line-height: 40px;
+    font-size: smaller;
+}
+.mui-table-view .mui-media-object{
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+    margin-top: 6px;
+	vertical-align:bottom;
+}
+.mui-table-view-cell {
+    padding: 8px 15px;
+}
+.mui-table-view-cell::after {
+    right: 15px;
+}
+.mui-table-view::before {
+    height: 0px;
+}
+.mui-table-view::after {
+    height: 0px;
+}

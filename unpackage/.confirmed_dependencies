@@ -1,0 +1,111 @@
+{
+	"index.html": {
+		"resources": [
+			"fonts/mui-icons-extra.ttf",
+			"css/main.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/icons-extra.css",
+			"Chats.html",
+			"css/iconfont.css",
+			"fonts/iconfont.woff"
+		],
+		"refer": [
+			"Contacts.html",
+			"Me.html",
+			"Chats.html",
+			"Discover.html"
+		]
+	},
+	"Contacts.html": {
+		"resources": [
+			"css/mui.indexedlist.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/mui.indexedlist.js",
+			"css/main.css",
+			"images/shuijiao.jpg",
+			"css/contacts.css",
+			"css/iconfont.css",
+			"fonts/iconfont.woff"
+		]
+	},
+	"Chats.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"images/muwu.jpg",
+			"images/logo.png",
+			"css/main.css",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"Contacts.html",
+			"chats/chatView.html",
+			"chats/im-chat.html"
+		]
+	},
+	"Discover.html": {
+		"resources": [
+			"images/afyx.png",
+			"images/afpl.png",
+			"images/aff.png",
+			"images/afy.png",
+			"images/afg.png",
+			"css/discover.css",
+			"images/afs.png",
+			"images/afp.png",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"Me.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/cbd.jpg",
+			"css/me.css",
+			"images/afy.png",
+			"css/iconfont.css",
+			"images/afs.png",
+			"fonts/iconfont.woff"
+		]
+	},
+	"chats/chatView.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/chatView.css",
+			"css/iconfont.css",
+			"fonts/iconfont.woff",
+			"js/mui.imageViewer.js",
+			"css/im-chat.css",
+			"css/app.css",
+			"css/mui.imageviewer.css",
+			"js/arttmpl.js",
+			"images/logo.png",
+			"images/yuyin.png",
+			"css/chatViewFont.css",
+			"fonts/chatView.woff",
+			"images/muwu.jpg",
+			"images/cbd.jpg"
+		]
+	},
+	"chats/im-chat.html": {
+		"resources": [
+			"js/mui.imageViewer.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.imageviewer.css",
+			"js/arttmpl.js",
+			"images/logo.png",
+			"css/im-chat.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/chatView.css"
+		]
+	}
+}

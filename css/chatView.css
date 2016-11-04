@@ -1,0 +1,213 @@
+.mui-bar-nav{
+	background-color: #333333;
+	box-shadow: none;
+	z-index: 1000;
+}
+.mui-bar .mui-title{
+	color: white;
+	text-align: left;
+}
+.mui-bar-nav a{
+	color: white;
+}
+.mui-bar .mui-title {
+    left: 55px;
+    right: 55px;
+}
+.input-text{
+	border: none;
+}
+.footer-center .input-text{
+	border: none;
+	background-color: #FAFAFA;
+    border-bottom: 1px solid #c8c8c8;
+}
+.footer-center [class*="input"]{
+	border-radius: 0px;
+}
+input[type="color"], input[type="date"], input[type="datetime-local"], input[type="datetime"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea{
+	border-radius: 0px;
+}
+.footer-right i{
+	font-size: xx-large;
+	color: #8F8F94;
+}
+
+.footer-left i{
+	bottom: 6px;
+    font-size:26px;
+	color: #8F8F94;
+    left: 5px;
+}
+.jianpan{
+	font-size: 31px !important;
+    padding-top: 2px !important;
+}
+.yuyin{
+    margin-top: 3.5px !important;
+}
+.footer-center [class*="input"] {
+    height: 100%;
+    margin-left: 10px;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+.footer-center {
+    margin-left: -15px;
+}
+#biaoqing{
+	bottom: 27%;
+    font-size: 29px !important;
+    padding-top: 10px !important;
+    position: absolute;
+    right: 45px;
+}
+footer{
+	border-top: none;
+}
+footer .mui-icon-paperplane:before {
+	content: "发送";
+}
+
+footer .mui-icon-paperplane {
+	/*-webkit-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);*/
+	-webkit-animation: send 50ms;
+	animation: send 50ms;
+	background-color: yellowgreen;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px !important;
+    line-height: 28px;
+    margin-top: 1px;
+    padding: 2px 5px 0;
+    word-break: keep-all;
+}
+.mui-icon-plus{
+	padding-right: 3px;
+	-webkit-animation: plus 30ms;
+	animation: plus 30ms;
+}
+@keyframes send
+{
+from {
+	width: 50%;
+	height: 14px;
+	-webkit-opacity: 0;
+	opacity: 0;
+	}
+to {
+	width: 100%;
+	height: 28px;
+	-webkit-opacity: 1;
+	opacity: 1;
+	}
+}
+@-webkit-keyframes send
+{
+from {
+	width: 50%;
+	height: 14px;
+	-webkit-opacity: 0;
+	opacity: 0;
+	}
+to {
+	width: 100%;
+	height: 28px;
+	-webkit-opacity: 1;
+	opacity: 1;
+}
+}
+
+@keyframes plus
+{
+from {
+	font-size: x-large;
+	}
+to {
+	font-size: xx-large;
+	}
+}
+@-webkit-keyframes plus
+{
+from {
+	font-size: x-large;
+	}
+to {
+	font-size: xx-large;
+}
+}
+
+.mui-slider {
+    background-color: #F7F7F7;
+    bottom: 0;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.mui-grid-view.mui-grid-9 {
+    background-color: #F7F7F7;
+    border-top: 1px solid #eee;
+    margin-bottom: 8px;
+    border-left: none;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+    width: 25%;
+    height: 95px;
+    margin-bottom: 5px;
+    border: none;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell a span{
+    width: 90%;
+    padding: 10px 5px;
+    font-size: xx-large !important;
+    border-radius: 6px;
+    border: 1px #eee solid;
+    background-color: white;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell a .mui-media-body{
+    font-size: x-small;
+}
+.mui-slider-indicator .mui-indicator {
+    height: 4px;
+    width: 4px;
+}
+.mui-slider-indicator{
+	height: 22px;
+}
+.mui-slider-group{
+	margin-bottom: 30px;
+}
+.mui-slider-indicator {
+    bottom: 0;
+    padding-bottom: 30px;
+}
+.mui-slider-indicator .mui-indicator {
+    background-color: #CCCCCC;
+    border-radius: 50%;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    height: 6px;
+    margin: 1px 6px;
+    width: 6px;
+}
+.mui-slider-indicator .mui-active {
+    background-color: #929292 !important;
+}
+.mui-slider{
+	display: none;
+}
+.input-sound{
+	height: 80% !important;
+	border-radius: 6px !important;
+	color: #8F8F94 !important;
+	margin-top: 7px !important;
+}
+.msg-user-img{
+	border-radius: 0px !important;
+}
+#msg-text:focus{
+	border-bottom: 1px solid yellowgreen !important;
+}

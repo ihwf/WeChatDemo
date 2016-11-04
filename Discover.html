@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/discover.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+		    <ul class="mui-table-view">
+			
+				<li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/afp.png">
+			            <div class="mui-media-body">
+			                朋友圈
+			            </div>
+			        </a>
+			    </li>
+		   </ul>
+		   
+		   <ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/afs.png">
+			            <div class="mui-media-body">
+			                扫一扫
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/afy.png">
+			            <div class="mui-media-body">
+			                摇一摇
+			            </div>
+			        </a>
+			    </li>
+		   </ul>
+		   
+		    <ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/aff.png">
+			            <div class="mui-media-body">
+			                附近的人
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/afpl.png">
+			            <div class="mui-media-body">
+			                漂流瓶
+			            </div>
+			        </a>
+			    </li>
+		   </ul>
+		   
+		    <ul class="mui-table-view">
+		    	<li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/afg.png">
+			            <div class="mui-media-body">
+			                购物
+			            </div>
+			        </a>
+			    </li>
+				<li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/afyx.png">
+			            <div class="mui-media-body">
+			                游戏
+			            </div>
+			        </a>
+			    </li>
+		   </ul>
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+			document.addEventListener('swipeleft',function() {
+				plus.webview.show('Me.html','slide-in-right',100);
+			});
+			document.addEventListener('swiperight',function() {
+				plus.webview.show('Contacts.html','slide-in-left',100);
+		     });
+		</script>
+	</body>
+
+</html>

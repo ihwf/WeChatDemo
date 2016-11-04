@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link href="css/main.css" rel="stylesheet"/>
+    <title></title>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav ">
+		<a class="mui-icon iconfont mui-pull-right">&#xe681;</a>
+	    <a class="mui-icon iconfont mui-pull-right">&#xe6a3;</a>
+	    <h1 class="mui-title">微信</h1>
+	</header>
+	
+	
+	<nav class='mui-bar mui-bar-tab'>
+		<a class='mui-tab-item mui-active' href="Chats.html" id="Chats.html">
+			<span class='mui-icon iconfont'>&#xe609;</span>
+			<span class='mui-tab-label'>微信</span>
+		</a>
+		<a class='mui-tab-item' href="Contacts.html" id="Contacts.html">
+			<span class='mui-icon iconfont'>&#xe69c;</span>
+			<span class='mui-tab-label'>通讯录</span>
+		</a>
+		<a class='mui-tab-item' href="Discover.html" id="Discover.html">
+			<span class='mui-icon mui-icon-extra mui-icon-extra-find'></span>
+			<span class='mui-tab-label'>发现</span>
+		</a>
+		<a class='mui-tab-item' href="Me.html" id="Me.html">
+			<span class='mui-icon iconfont'>&#xe60a;</span>
+			<span class='mui-tab-label'>我</span>
+		</a>
+	</nav>
+	
+	<script src="js/mui.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+		
+		
+      	
+      	var pages = ['Chats.html','Discover.html','Me.html'];
+      	var pageStyle = {
+      		top: '44px',
+      		bottom: '51px'
+      	};
+      	
+      	mui.plusReady(function(){
+      		var view = plus.webview.currentWebview();
+      		for(var i=0;i<pages.length;i++){
+      			var page = plus.webview.create(pages[i],pages[i],pageStyle);
+     			page.hide();
+      			view.append(page);
+      		}
+      		plus.webview.show(pages[0]);
+      		
+      		if(1){
+	      		plus.webview.getWebviewById('Chats.html').addEventListener( "show", function(e){
+						document.getElementById('Chats.html').classList.add('mui-active');
+						document.getElementById('Contacts.html').classList.remove('mui-active');
+						document.getElementById('Discover.html').classList.remove('mui-active');
+						document.getElementById('Me.html').classList.remove('mui-active');
+					}, false );
+				plus.webview.getWebviewById('Discover.html').addEventListener( "show", function(e){
+					document.getElementById('Discover.html').classList.add('mui-active');
+					document.getElementById('Me.html').classList.remove('mui-active');
+					document.getElementById('Contacts.html').classList.remove('mui-active');
+					document.getElementById('Chats.html').classList.remove('mui-active');
+				}, false );
+				plus.webview.getWebviewById('Me.html').addEventListener( "show", function(e){
+					document.getElementById('Discover.html').classList.remove('mui-active');
+					document.getElementById('Me.html').classList.add('mui-active');
+					document.getElementById('Chats.html').classList.remove('mui-active');
+					document.getElementById('Contacts.html').classList.remove('mui-active');
+				}, false );
+				if(plus.webview.getWebviewById('Contacts.html')!=null){
+				plus.webview.getWebviewById('Contacts.html').addEventListener( "show", function(e){
+					document.getElementById('Contacts.html').classList.add('mui-active');
+					document.getElementById('Chats.html').classList.remove('mui-active');
+					document.getElementById('Discover.html').classList.remove('mui-active');
+					document.getElementById('Me.html').classList.remove('mui-active');
+				}, false );
+				}
+			}
+			
+    		});
+      		
+      	mui('.mui-bar-tab').on('tap','a',function(){
+			if(this.getAttribute('href') == "Contacts.html"){
+				mui.openWindow({
+					url: "Contacts.html",
+					id: "Contacts.html",
+					styles: {top:'44px',bottom:'51px'}
+				});
+			
+			}else{
+				if(plus.webview.getWebviewById('Contacts.html')!=null){
+					plus.webview.getWebviewById('Contacts.html').hide();
+				}
+				plus.webview.show(this.getAttribute('href'),'fade-in',100);
+			}
+			
+      	});
+      	
+      	
+      	
+      	
+    </script>
+
+</body>
+</html>

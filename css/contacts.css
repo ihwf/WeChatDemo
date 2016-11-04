@@ -1,0 +1,94 @@
+.mui-media-body{
+	height: 42px;
+    line-height: 42px;
+    font-size: smaller;
+}
+.mui-table-view .mui-media-object{
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+    margin-top: 4px;
+	vertical-align:bottom;
+}
+.mui-table-view-cell {
+    padding: 8px 15px;
+}
+.mui-table-view-cell::after {
+    right: 25px;
+}
+.mui-table-view::before {
+    height: 0px;
+}
+.mui-table-view::after {
+    height: 0px;
+}
+.mui-indexed-list-alert{
+	border-radius: 5px;;
+}
+.mui-indexed-list-bar{
+	background-color: transparent;
+}
+.mui-indexed-list-bar a{
+	margin-top: 6%;
+}
+.mui-indexed-list-search {
+    border-bottom: none;
+    display: none;
+}
+.mui-indexed-list{
+	border-top: none;
+}
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+.mui-bar {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.new-friend{
+	width: 42px;
+	height: 42px;
+	background-color: orange;
+	font-size: x-large;
+	text-align: center;
+	color: white;
+}
+.group-chats{
+	width: 42px;
+	height: 42px;
+	background-color: green;
+	font-size: x-large;
+	text-align: center;
+	color: white;
+}
+.tag{
+	width: 42px;
+	height: 42px;
+	background-color: blue;
+	font-size: large;
+	text-align: center;
+	color: white;
+}
+.public{
+	width: 42px;
+	height: 42px;
+	background-color: blue;
+	font-size: x-large;
+	text-align: center;
+	color: white;
+}
+.mui-table-view::before {
+    height: 0px;
+}
+.mui-table-view::after {
+    height: 0px;
+}
+.mui-table-view-divider::before{
+	height: 0px;
+}
+.mui-table-view-divider::after{
+	height: 0px;
+}
