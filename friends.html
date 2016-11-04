@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+	</body>
+	<header class="mui-bar mui-bar-nav" style="background-color: #393a3e;">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;margin-right: 0;border-right: 1px solid gray;"></a>
+	    <div style="line-height: 44px;">
+	    		<h4 class="mui-pull-left" style="color: white;margin: 0;padding-left: 10px;">朋友圈</h4>
+	    </div>
+	</header>
+	<script type="text/javascript">
+		mui.init({
+		    subpages:[{
+		      url: 'friends-sub.html',//子页面HTML地址，支持本地地址和网络地址
+		      id: 'friends-sub.html',//子页面标志
+		      styles:{
+		        top: '44px',//子页面顶部位置
+		      },
+		      extras:{}//额外扩展参数
+		    }]
+		  });
+	</script>
+
+</html>

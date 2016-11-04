@@ -13,7 +13,7 @@
 		<div class="mui-content">
 		    <ul class="mui-table-view">
 			
-				<li class="mui-table-view-cell mui-media">
+				<li class="mui-table-view-cell mui-media" id="friends">
 			        <a href="javascript:;">
 			            <img class="mui-media-object mui-pull-left" src="images/afp.png">
 			            <div class="mui-media-body">
@@ -91,6 +91,27 @@
 			document.addEventListener('swiperight',function() {
 				plus.webview.show('Contacts.html','slide-in-left',100);
 		     });
+		     mui('#friends').on('tap','a',function() {
+//		 		var titleName = this.getAttribute('title');
+//		 		var headerImg = this.querySelector('img').getAttribute('src');
+		 		
+		 		mui.openWindow({
+		 			url:'friends.html',
+		 			id:'friends.html',
+		 			
+		 			show:{
+		 				autoShow:true,
+		 				aniShow:'slide-in-right',
+		 				duration:100
+		 			},
+		 			waiting:{
+		 				autoShow:true,
+		 				title:'waiting...'
+		 			},
+		 			extras:{
+		 			}
+		 		})
+		 	});
 		</script>
 	</body>
 
