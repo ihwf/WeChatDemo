@@ -11,10 +11,11 @@
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav ">
-		<a class="mui-icon iconfont mui-pull-right">&#xe681;</a>
-	    <a class="mui-icon iconfont mui-pull-right">&#xe6a3;</a>
+		<a class="mui-icon iconfont mui-pull-right icon-jia"></a>
+	    <a class="mui-icon iconfont mui-pull-right icon-snimicsousuo"></a>
 	    <h1 class="mui-title">微信</h1>
 	</header>
+	
 	
 	
 	<nav class='mui-bar mui-bar-tab'>
@@ -104,7 +105,23 @@
 			}
 			
       	});
-      	
+      	document.querySelector('.icon-snimicsousuo').addEventListener('click',function() {
+      		mui.openWindow({
+					url:'search.html',
+		 			id:'search.html',
+		 			
+		 			show:{
+		 				autoShow:true,
+		 				aniShow:'slide-in-right',
+		 				duration:100
+		 			},
+		 			waiting:{
+		 				autoShow:true,
+		 				title:'waiting...'
+		 			},
+		 			extras:{}
+				});
+      	});
       	
       	
       	

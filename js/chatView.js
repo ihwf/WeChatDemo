@@ -23,8 +23,8 @@
 	$.plusReady(function() {
 		
 		var header = plus.webview.currentWebview().chatHeader;
-		var title = plus.webview.currentWebview().chatTitle;
-		document.querySelector('.mui-title').innerHTML = title;
+		var chatName = plus.webview.currentWebview().chatTitle;
+		document.querySelector('.mui-title').innerHTML = chatName;
 	
 	plus.webview.currentWebview().setStyle({
 		softinputMode: "adjustResize"
@@ -257,13 +257,24 @@
 					}, function(err) {});
 					break;
 				case 2:
-					plus.gallery.pick(function(path) {
-						send({
-							sender: 'self',
-							type: 'image',
-							content: path
-						});
-					}, function(err) {}, null);
+//				单选图片
+//					plus.gallery.pick(function(path) {
+//						send({
+//							sender: 'self',
+//							type: 'image',
+//							content: path
+//						});
+//					}, function(err) {}, null);
+					//多选图片
+					plus.gallery.pick( function(e){
+					    	for(var i in e.files){
+					    		send({
+								sender: 'self',
+								type: 'image',
+								content: e.files[i]
+							});
+					    	}
+					   }, function ( e ) {},{filter:"image",multiple:true});
 					break;
 			}
 		});
@@ -454,6 +465,49 @@
 					}, 150);
 				}
 			}, false);
+			//显示聊天信息页
+			mui('.mui-bar-nav').on('tap','.icon-wo',function() {
+		 		
+		 		mui.openWindow({
+		 			url:'chatInfo.html',
+		 			id:'chatInfo.html',
+		 			
+		 			show:{
+		 				autoShow:true,
+		 				aniShow:'slide-in-right',
+		 				duration:100
+		 			},
+		 			waiting:{
+		 				autoShow:true,
+		 				title:'waiting...'
+		 			},
+		 			extras:{
+		 				chatHeader:header,
+		 				chatName:chatName
+		 			}
+		 		})
+			});
+			
+			document.querySelector('.msg-user-img').addEventListener('click',function() {
+				mui.openWindow({
+		 			url:'moreInfo.html',
+		 			id:'moreInfo.html',
+		 			
+		 			show:{
+		 				autoShow:true,
+		 				aniShow:'slide-in-right',
+		 				duration:100
+		 			},
+		 			waiting:{
+		 				autoShow:true,
+		 				title:'waiting...'
+		 			},
+		 			extras:{
+		 				chatHeader:header,
+		 				chatName:chatName
+		 			}
+		 		})
+			});
 	});
 
 

@@ -1,0 +1,101 @@
+.mui-bar-nav{
+	background-color: #333333;
+	box-shadow: none;
+	z-index: 1000;
+}
+.mui-bar .mui-title{
+	color: white;
+	text-align: left;
+	font-size: 14px;
+}
+.mui-bar-nav a{
+	color: white;
+}
+.mui-bar .mui-title {
+    left: 55px;
+    right: 55px;
+}
+.mui-icon-arrowthinleft::after{
+	position: absolute;
+    top: 0;
+    right: 0;
+    height: 44px;
+    line-height: 44px;
+    width: 1px;
+    content: '';
+    -webkit-transform:  scaleY(.5);
+            transform: scaleY(.5);
+    background-color: #222222;
+}
+.mui-content{
+	height: 100%;
+	margin-top: -15px;
+}
+.headers{
+	width: 100%;
+	background-color: white;
+	margin-top: 10%;
+}
+.headers .header{
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+	position: relative;
+}
+.headers .icon-jia{
+	border: 1px #BBBBBB solid;
+	color: #BBBBBB;
+	line-height: 50px;
+	height: 50px;
+	font-size: 48px !important;
+	position: absolute;
+	margin-top: 15px;
+}
+.headers .icon-jia:hover{
+	background-color: #929292;
+}
+.headers span{
+	position: absolute;
+	left: 33px;
+	margin-top: 65px;
+	color: #BBBBBB;
+}
+.mui-table-view{
+	margin-top: 20px;
+}
+.mui-media-body{
+	height: 40;
+    line-height: 40px;
+    font-size: smaller;
+}
+.mui-table-view .mui-media-object{
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+    margin-top: 6px;
+	vertical-align:bottom;
+}
+.mui-table-view-cell {
+    padding: 8px 15px;
+}
+.mui-table-view-cell::after {
+    right: 15px;
+}
+.mui-table-view::before {
+    height: 0px;
+}
+.mui-table-view::after {
+    height: 0px;
+}
+.mui-switch{
+	height: 27PX;
+}
+.mui-switch-mini {
+    width: 44px;
+}
+.mui-switch .mui-switch-handle {
+    height: 23px;
+    left: 0px;
+    top: 0;
+    width: 23px;
+}
