@@ -74,7 +74,7 @@ footer .mui-icon-paperplane {
 	transform: rotateZ(45deg);*/
 	-webkit-animation: send 50ms;
 	animation: send 50ms;
-	background-color: yellowgreen;
+	background-color: green;
     border-radius: 4px;
     color: white;
     font-size: 14px !important;
@@ -146,19 +146,19 @@ to {
     width: 100%;
     z-index: 1;
 }
-.mui-grid-view.mui-grid-9 {
+#Gallery .mui-grid-view {
     background-color: #F7F7F7;
     border-top: 1px solid #eee;
     margin-bottom: 8px;
     border-left: none;
 }
-.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+#Gallery .mui-grid-view .mui-table-view-cell {
     width: 25%;
     height: 95px;
     margin-bottom: 5px;
     border: none;
 }
-.mui-grid-view.mui-grid-9 .mui-table-view-cell a span{
+#Gallery .mui-grid-view .mui-table-view-cell a span{
     width: 90%;
     padding: 10px 5px;
     font-size: xx-large !important;
@@ -166,7 +166,7 @@ to {
     border: 1px #eee solid;
     background-color: white;
 }
-.mui-grid-view.mui-grid-9 .mui-table-view-cell a .mui-media-body{
+#Gallery .mui-grid-view .mui-table-view-cell a .mui-media-body{
     font-size: x-small;
 }
 .mui-slider-indicator .mui-indicator {
@@ -210,4 +210,22 @@ to {
 }
 #msg-text:focus{
 	border-bottom: 1px solid yellowgreen !important;
+}
+/*qq表情包*/
+#biaoqingbao{
+	width: 100%;
+}
+#biaoqingbao .mui-table-view{
+	width: 90%;
+	margin: 0px auto;
+	background-color: #f7f7f7;
+	border: none;
+}
+#biaoqingbao li{
+	display: inline-block;
+	width: 14%;
+	height: 25%;
+	line-height: 25%;
+	padding: 10px;
+	border: none;
 }
