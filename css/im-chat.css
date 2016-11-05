@@ -124,7 +124,7 @@ html,
 				float: left;
 			}
 			.msg-item .msg-content .msg-content-inner {
-				overflow-x: hidden;
+				word-wrap: break-word;
 			}
 			.msg-item .msg-content .msg-content-arrow {
 				position: absolute;

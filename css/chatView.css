@@ -214,10 +214,11 @@ to {
 /*qq表情包*/
 #biaoqingbao{
 	width: 100%;
+	border-top: 1px #D8D8D8 solid;
 }
 #biaoqingbao .mui-table-view{
 	width: 90%;
-	margin: 0px auto;
+	margin: 1px auto;
 	background-color: #f7f7f7;
 	border: none;
 }
@@ -228,4 +229,7 @@ to {
 	line-height: 25%;
 	padding: 10px;
 	border: none;
+}
+.mui-icon-paperplane{
+	display: none;
 }

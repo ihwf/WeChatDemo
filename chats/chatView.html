@@ -27,7 +27,7 @@
 					<% if(item.sender=='self' ) { %>
 						<i class="msg-user mui-icon mui-icon-person"></i>
 					<% } else { %>
-						<img class="msg-user-img" src="" alt="" />
+						<img class="msg-user-img" src="../<%= header %>" alt="" />
 					<% } %>
 					<div class="msg-content">
 						<div class="msg-content-inner">
@@ -55,12 +55,15 @@
 				<i id='msg-image' class="mui-icon iconfont yuyin"></i>
 			</div>
 			<div class="footer-center">
-				<textarea id='msg-text' type="text" class='input-text'></textarea>
+				<div contenteditable="true" id='msg-text' class='input-text'>
+				</div>
+					
 				<button id='msg-sound' type="button" class='input-sound' style="display: none;">按住说话</button>
 			</div>
 			<label for="" class="footer-right">
 				<i id="biaoqing" class="iconfont icon-biaoqing"></i>
 				<i id='msg-type' class="mui-icon mui-icon-plus"></i>
+				<i id='msg-type' class="mui-icon mui-icon-paperplane"></i>
 			</label>
 		</footer>
 		
@@ -141,7 +144,7 @@
 		
 		<!--表情包-->
 		<div id="biaoqingbao" class="mui-slider">
-				<div class="mui-slider-group">
+				<div class="mui-slider-group" id="selectFace">
 					<div class="mui-slider-item">
 						<ul class="mui-table-view mui-grid-view mui-grid-9">
 							<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-2">
@@ -586,6 +589,9 @@
 				template.config('escape', false);
 				//$.plusReady=function(fn){fn();};
 				$.plusReady(function() {
+					
+					var header = plus.webview.currentWebview().chatHeader;
+//					document.querySelector('.msg-user-img').setAttribute('src','../'+header);
 					plus.webview.currentWebview().setStyle({
 						softinputMode: "adjustResize"
 					});
@@ -653,7 +659,8 @@
 							model: record
 						});*/
 						ui.areaMsgList.innerHTML = template('msg-template', {
-							"record": record
+							"record": record,
+							"header":header
 						});
 						var msgItems = ui.areaMsgList.querySelectorAll('.msg-item');
 						[].forEach.call(msgItems, function(item, index) {
@@ -691,18 +698,15 @@
 					};
 
 					//选择表情
-					mui('#biaoqingbao').on('tag','img',function() {
+					mui('#selectFace').on('tap','img',function() {
 						var faceImg = this.getAttribute('src');
-						alert(faceImg);
+							send({
+								sender: 'self',
+								type: 'image',
+								content: faceImg
+							});
 					});
-//					var cmr = plus.camera.getCamera();
-//									cmr.captureImage(function(path) {
-//										send({
-//											sender: 'self',
-//											type: 'image',
-//											content: "file://" + plus.io.convertLocalFileSystemURL(path)
-//										});
-//									}, function(err) {});
+//					
 
 					function msgTextFocus() {
 							ui.boxMsgText.focus();
@@ -737,9 +741,7 @@
 					//						}
 					//					});
 					//发送文字
-					ui.footerLeft.addEventListener('release', function(event) {
-						if (ui.btnMsgImage.classList.contains('mui-icon-paperplane')) {
-						
+						document.querySelector('.mui-icon-paperplane').addEventListener('click',function() {
 //							showKeyboard();
 							ui.boxMsgText.focus();
 							setTimeout(function() {
@@ -753,12 +755,11 @@
 							send({
 								sender: 'self',
 								type: 'text',
-								content: ui.boxMsgText.value.replace(new RegExp('\n', 'gm'), '<br/>')
+								content: ui.boxMsgText.innerHTML.replace(new RegExp('\n', 'gm'), '<br/>')
 							});
-							ui.boxMsgText.value = '';
+							ui.boxMsgText.innerHTML = '';
 							$.trigger(ui.boxMsgText, 'input', null);
-						}
-					} , false);
+						});
 					//显示按住说话框
 					ui.footerRight.addEventListener('release', function(event) {
 						if (ui.btnMsgType.classList.contains('yuyin')) {
@@ -773,8 +774,8 @@
 							document.querySelector('#Gallery').style.display = 'none';
 							document.querySelector('footer').style.bottom = '0px';
 							
-							ui.boxMsgText.blur();
 							document.body.focus();
+							ui.boxMsgText.blur();
 						} else if (ui.btnMsgType.classList.contains('jianpan')) {
 							ui.btnMsgType.classList.add('yuyin');
 							ui.btnMsgType.classList.remove('jianpan');
@@ -923,11 +924,16 @@
 					});
 					//显示发送按钮
 					ui.boxMsgText.addEventListener('input', function(event) {
-						ui.btnMsgImage.classList[ui.boxMsgText.value == '' ? 'remove' : 'add']('mui-icon-paperplane');
-						
-						
+//						ui.btnMsgImage.classList[ui.boxMsgText.innerHTML == '' ? 'remove' : 'add']('mui-icon-paperplane');
+						if(ui.boxMsgText.innerHTML != ''){
+							document.querySelector('.mui-icon-paperplane').style.display = 'block';
+							document.querySelector('.mui-icon-plus').style.display = 'none';
+						}else{
+							document.querySelector('.mui-icon-paperplane').style.display = 'none';
+							document.querySelector('.mui-icon-plus').style.display = 'block';
+						}
 						ui.btnMsgImage.setAttribute("for", ui.boxMsgText.value == '' ? '' : 'msg-text');
-						ui.h.innerText = ui.boxMsgText.value.replace(new RegExp('\n', 'gm'), '\n-') || '-';
+						ui.h.innerText = ui.boxMsgText.innerHTML.replace(new RegExp('\n', 'gm'), '\n-') || '-';
 						ui.footer.style.height = (ui.h.offsetHeight + footerPadding) + 'px';
 						ui.content.style.paddingBottom = ui.footer.style.height;
 					});
@@ -941,6 +947,9 @@
 						
 						document.querySelector('#biaoqing').classList.add('icon-biaoqing');
 						document.querySelector('#biaoqing').classList.remove('jianpan');
+						
+						ui.content.style.paddingBottom = '50px';
+						
 						
 						ui.boxMsgText.focus();
 						setTimeout(function() {
@@ -981,19 +990,23 @@
 							document.querySelector('#biaoqingbao').style.display = 'block';
 							document.querySelector('#Gallery').style.display = 'none';
 							
+							ui.content.style.paddingBottom = '60%';
+							
 							ui.boxMsgText.style.display = 'block';
 							ui.boxMsgSound.style.display = 'none';
 							
 							ui.btnMsgType.classList.add('yuyin');
 							ui.btnMsgType.classList.remove('jianpan');
-							ui.boxMsgText.blur();
 							document.body.focus();
+							ui.boxMsgText.blur();
 						} else if (this.classList.contains('jianpan')) {
 							this.classList.add('icon-biaoqing');
 							this.classList.remove('jianpan');
 							
 							ui.boxMsgText.style.display = 'block';
 							ui.boxMsgSound.style.display = 'none';
+							
+							ui.content.style.paddingBottom = '50px';
 							
 							document.querySelector('#biaoqingbao').style.display = 'none';
 							document.querySelector('#Gallery').style.display = 'none';
@@ -1015,7 +1028,6 @@
 			mui.plusReady(function() {
 				var self = plus.webview.currentWebview();
 				document.querySelector('.mui-title').innerText=self.chatTitle;
-				document.querySelector('.msg-user-img').setAttribute('src','../'+self.chatHeader);
 				
 			});
 		</script>
