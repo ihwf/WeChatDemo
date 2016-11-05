@@ -59,6 +59,9 @@
 			"images/afp.png",
 			"js/mui.min.js",
 			"css/mui.min.css"
+		],
+		"refer": [
+			"friends.html"
 		]
 	},
 	"Me.html": {
@@ -232,6 +235,26 @@
 			"js/mui.min.js",
 			"css/mui.min.css",
 			"css/chatView.css"
+		]
+	},
+	"friends-sub.html": {
+		"resources": [
+			"images/5.jpg",
+			"images/999pic_5281c33cbc368.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/4.jpg"
+		]
+	},
+	"friends.html": {
+		"resources": [
+			"friends-sub.html",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"friends-sub.html"
 		]
 	}
 }
