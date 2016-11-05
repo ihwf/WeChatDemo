@@ -1,0 +1,35 @@
+.mui-bar-nav{
+	background-color: #333333;
+}
+.mui-action-back{
+	color: white;
+}
+.search{
+	width: 85%;
+	background-color: #333333;
+	color: white;
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	padding-left: 30px;
+	padding-right: 10%;
+	left: 45px;
+	top: 7px;
+	border: none;
+	border-bottom: 1px yellowgreen solid;
+}
+.mui-bar-nav i{
+	font-size: x-large;
+	color: white;
+	padding-left: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+.mui-icon-mic{
+	position: absolute;
+	left: 72%;
+	display: inline-block;
+	color: white;
+	z-index: 1;
+}

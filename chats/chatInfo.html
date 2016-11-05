@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/chatInfo.css" rel="stylesheet" />
+		<link href="../css/iconfont.css" rel="stylesheet" />
+		
+	</head>
+
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+	        <a class="mui-action-back mui-icon mui-icon-arrowthinleft mui-pull-left"></a>
+	        <h1 class="mui-title">聊天信息</h1>
+	    </header>
+	    
+	    <div class="mui-content">
+	        <div class="headers">
+	        		<img src="" class="header"/>
+	        		<span id="name"></span>
+	        		<i class="iconfont icon-jia"></i>
+	        </div>
+	        
+	        <ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			           <div class="mui-media-body">
+			                置顶聊天
+			            </div>
+			        </a>
+			        <div class="mui-switch mui-switch-mini">
+						<div class="mui-switch-handle"></div>
+					</div>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			           <div class="mui-media-body">
+			                消息免打扰
+			            </div>
+			        </a>
+			        <div class="mui-switch mui-switch-mini">
+						<div class="mui-switch-handle"></div>
+					</div>
+			    </li>
+				<li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			        	<div class="mui-media-body">
+		                聊天文件
+		            </div>
+			        </a>
+			    </li>
+		   </ul>
+		   
+		   <ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			           <div class="mui-media-body">
+			                设置当前聊天背景
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			           <div class="mui-media-body">
+			                查找聊天记录
+			            </div>
+			        </a>
+			    </li>
+		   </ul>
+		   
+		   <ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			           <div class="mui-media-body">
+			                清空聊天记录
+			            </div>
+			        </a>
+			    </li>
+		   </ul>
+		   
+		   <ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			           <div class="mui-media-body">
+			                投诉
+			            </div>
+			        </a>
+			    </li>
+		   </ul>
+	    </div>
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+			mui.plusReady(function() {
+				var header = plus.webview.currentWebview().chatHeader;
+				var chatName = plus.webview.currentWebview().chatName;
+				document.querySelector('.header').setAttribute('src',"../"+header);
+				document.querySelector('#name').innerHTML = chatName;
+				
+				document.querySelector('.header').addEventListener('click',function() {
+				mui.openWindow({
+		 			url:'moreInfo.html',
+		 			id:'moreInfo.html',
+		 			
+		 			show:{
+		 				autoShow:true,
+		 				aniShow:'slide-in-right',
+		 				duration:100
+		 			},
+		 			waiting:{
+		 				autoShow:true,
+		 				title:'waiting...'
+		 			},
+		 			extras:{
+		 				chatHeader:header,
+		 				chatName:chatName
+			 			}
+			 		})
+				});
+			})
+		</script>
+	</body>
+
+</html>
