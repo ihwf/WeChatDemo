@@ -7,15 +7,38 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.min.css" rel="stylesheet" />
 	</head>
-
+	<style type="text/css">
+		header a{
+			color: white;
+			margin-right: 0;
+			border-width:50% ;
+		}
+		.mui-icon-left-nav::after{
+			position: absolute;
+		    top: 0;
+		    right: 0;
+		    left: 50px;
+		    height: 44px;
+		    line-height: 44px;
+		    width: 1px;
+		    content: '';
+		    -webkit-transform:  scaleY(.5);
+		            transform: scaleY(.5);
+		    background-color: #222222;
+		}
+		header h4{
+			color: white;margin: 0;
+			padding-left: 10px;
+			line-height: 44px;
+			padding-left: 30px;
+		}
+	</style>
 	<body>
 		<script src="js/mui.min.js"></script>
 	</body>
 	<header class="mui-bar mui-bar-nav" style="background-color: #393a3e;">
-	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;margin-right: 0;border-right: 1px solid gray;"></a>
-	    <div style="line-height: 44px;">
-	    		<h4 class="mui-pull-left" style="color: white;margin: 0;padding-left: 10px;">朋友圈</h4>
-	    </div>
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    	<h4 class="mui-pull-left">朋友圈</h4>
 	</header>
 	<script type="text/javascript">
 		mui.init({
