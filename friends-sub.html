@@ -249,7 +249,7 @@
 					</template>
 				</div>
 				<div style="clear:both;"></div>
-				<nav class="mui-bar mui-bar-tab" v-if='friend.pinglun'>
+				<nav class="mui-bar mui-bar-tab" v-if='friend.pinglun' style="height: 110px;">
 					<input type="text" name="pinglun" id="pinglun" value="" style="width: 80%;"/>
 					<button @click='pinglun(friend.args)'>发送</button>
 				</nav>
@@ -336,7 +336,6 @@
 		        		this.friends[id].args.id = id;
 		        		this.friends[id].args.to = to;
 		        		this.friends[id].pinglun = true;
-		        		document.getElementById('pinglun').focus();
 		        },
 		        pinglun: function(args) {
 		        		var id = args.id;

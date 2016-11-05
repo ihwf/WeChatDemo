@@ -254,7 +254,13 @@
 			"images/999pic_5281c33cbc368.jpg",
 			"js/mui.min.js",
 			"css/mui.min.css",
-			"images/4.jpg"
+			"images/4.jpg",
+			"images/2.jpg",
+			"js/vue.js",
+			"images/1.jpg",
+			"images/3.jpg",
+			"images/cbd.jpg",
+			"fonts/mui.ttf"
 		]
 	},
 	"friends.html": {
