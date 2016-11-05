@@ -92,8 +92,11 @@
 			"fonts/chatView.woff",
 			"images/muwu.jpg",
 			"images/cbd.jpg",
+<<<<<<< HEAD
 			"images/QQExpression/1.gif",
 			"images/QQExpression/2.gif",
+=======
+>>>>>>> master
 			"images/QQExpression/49.gif",
 			"images/QQExpression/60.gif",
 			"images/QQExpression/36.gif",
@@ -111,7 +114,10 @@
 			"images/QQExpression/46.gif",
 			"images/QQExpression/23.gif",
 			"images/QQExpression/96.gif",
+<<<<<<< HEAD
 			"images/QQExpression/102.gif",
+=======
+>>>>>>> master
 			"images/QQExpression/9.gif",
 			"images/QQExpression/117.gif",
 			"images/QQExpression/13.gif",
@@ -158,16 +164,28 @@
 			"images/QQExpression/8.gif",
 			"images/QQExpression/16.gif",
 			"images/QQExpression/97.gif",
+<<<<<<< HEAD
 			"images/QQExpression/26.gif",
 			"images/QQExpression/42.gif",
 			"images/QQExpression/48.gif",
 			"images/QQExpression/51.gif",
+=======
+			"images/QQExpression/42.gif",
+			"images/QQExpression/26.gif",
+			"images/QQExpression/48.gif",
+			"images/QQExpression/51.gif",
+			"images/QQExpression/1.gif",
+>>>>>>> master
 			"images/QQExpression/31.gif",
 			"images/QQExpression/85.gif",
 			"images/QQExpression/122.gif",
 			"images/QQExpression/44.gif",
 			"images/QQExpression/56.gif",
 			"images/QQExpression/57.gif",
+<<<<<<< HEAD
+=======
+			"images/QQExpression/2.gif",
+>>>>>>> master
 			"images/QQExpression/50.gif",
 			"images/QQExpression/39.gif",
 			"images/QQExpression/32.gif",
@@ -178,22 +196,34 @@
 			"images/QQExpression/38.gif",
 			"images/QQExpression/109.gif",
 			"images/QQExpression/106.gif",
+<<<<<<< HEAD
 			"images/QQExpression/130.gif",
+=======
+>>>>>>> master
 			"images/QQExpression/35.gif",
 			"images/QQExpression/28.gif",
 			"images/QQExpression/81.gif",
 			"images/QQExpression/127.gif",
+<<<<<<< HEAD
 			"images/QQExpression/131.gif",
 			"images/QQExpression/27.gif",
 			"images/QQExpression/14.gif",
 			"images/QQExpression/80.gif",
 			"images/QQExpression/107.gif",
+=======
+			"images/QQExpression/27.gif",
+			"images/QQExpression/14.gif",
+			"images/QQExpression/80.gif",
+>>>>>>> master
 			"images/QQExpression/95.gif",
 			"images/QQExpression/113.gif",
 			"images/QQExpression/104.gif",
 			"images/QQExpression/52.gif",
 			"images/QQExpression/83.gif",
+<<<<<<< HEAD
 			"images/QQExpression/105.gif",
+=======
+>>>>>>> master
 			"images/QQExpression/94.gif",
 			"images/QQExpression/33.gif",
 			"images/QQExpression/25.gif",
@@ -209,7 +239,10 @@
 			"images/QQExpression/17.gif",
 			"images/QQExpression/64.gif",
 			"images/QQExpression/119.gif",
+<<<<<<< HEAD
 			"images/QQExpression/101.gif",
+=======
+>>>>>>> master
 			"images/QQExpression/6.gif",
 			"images/QQExpression/68.gif",
 			"images/QQExpression/92.gif",
@@ -218,9 +251,15 @@
 			"images/QQExpression/67.gif",
 			"images/QQExpression/132.gif",
 			"images/QQExpression/73.gif",
+<<<<<<< HEAD
 			"images/QQExpression/90.gif",
 			"images/QQExpression/63.gif",
 			"images/QQExpression/75.gif",
+=======
+			"images/QQExpression/63.gif",
+			"images/QQExpression/75.gif",
+			"images/QQExpression/90.gif",
+>>>>>>> master
 			"images/QQExpression/126.gif",
 			"images/QQExpression/91.gif",
 			"images/QQExpression/86.gif"

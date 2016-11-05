@@ -559,7 +559,10 @@
 					<div class="mui-indicator"></div>
 					<div class="mui-indicator"></div>
 					<div class="mui-indicator"></div>
+<<<<<<< HEAD
 					<div class="mui-indicator"></div>
+=======
+>>>>>>> master
 				</div>
 			</div>
 		
@@ -697,6 +700,7 @@
 						var faceImg = this.getAttribute('src');
 						alert(faceImg);
 					});
+<<<<<<< HEAD
 //					var cmr = plus.camera.getCamera();
 //									cmr.captureImage(function(path) {
 //										send({
@@ -704,6 +708,15 @@
 //											type: 'image',
 //											content: "file://" + plus.io.convertLocalFileSystemURL(path)
 //										});
+=======
+//					var cmr = plus.camera.getCamera();
+//									cmr.captureImage(function(path) {
+//										send({
+//											sender: 'self',
+//											type: 'image',
+//											content: "file://" + plus.io.convertLocalFileSystemURL(path)
+//										});
+>>>>>>> master
 //									}, function(err) {});
 
 					function msgTextFocus() {
@@ -747,8 +760,13 @@
 							setTimeout(function() {
 								ui.boxMsgText.focus();
 								document.querySelector('#Gallery').style.display = 'none';
+<<<<<<< HEAD
 								document.querySelector('#biaoqingbao').style.display = 'none';
 								document.querySelector('footer').style.bottom = '0px';
+=======
+								document.querySelector('#biaoqingbao').style.display = 'none';
+								document.querySelector('footer').style.bottom = '0px';
+>>>>>>> master
 							}, 150);
 							//							event.detail.gesture.preventDefault();
 							
@@ -769,6 +787,11 @@
 							ui.boxMsgText.style.display = 'none';
 							ui.boxMsgSound.style.display = 'block';
 							
+<<<<<<< HEAD
+=======
+							document.querySelector('#biaoqing').classList.add('icon-biaoqing');
+							document.querySelector('#biaoqing').classList.remove('jianpan');
+>>>>>>> master
 							document.querySelector('#biaoqingbao').style.display = 'none';
 							document.querySelector('#Gallery').style.display = 'none';
 							document.querySelector('footer').style.bottom = '0px';
@@ -781,6 +804,10 @@
 							ui.boxMsgSound.style.display = 'none';
 							ui.boxMsgText.style.display = 'block';
 							
+<<<<<<< HEAD
+=======
+							
+>>>>>>> master
 							document.querySelector('#biaoqingbao').style.display = 'none';
 							document.querySelector('#Gallery').style.display = 'none';
 							document.querySelector('footer').style.bottom = '0px';
@@ -934,8 +961,12 @@
 					//显示键盘
 					var focus = false;
 					ui.boxMsgText.addEventListener('tap', function(event) {
+						document.querySelector('#biaoqingbao').style.display = 'none';
 						document.querySelector('#Gallery').style.display = 'none';
 						document.querySelector('footer').style.bottom = '0px';
+						
+						document.querySelector('#biaoqing').classList.add('icon-biaoqing');
+						document.querySelector('#biaoqing').classList.remove('jianpan');
 						
 						ui.boxMsgText.focus();
 						setTimeout(function() {
@@ -972,17 +1003,27 @@
 						if (this.classList.contains('icon-biaoqing')) {
 							this.classList.add('jianpan');
 							this.classList.remove('icon-biaoqing');
+<<<<<<< HEAD
 							
+=======
+>>>>>>> master
 							document.querySelector('footer').style.bottom = '27%';
 							document.querySelector('#biaoqingbao').style.display = 'block';
 							document.querySelector('#Gallery').style.display = 'none';
 							
+							ui.boxMsgText.style.display = 'block';
+							ui.boxMsgSound.style.display = 'none';
+							
+							ui.btnMsgType.classList.add('yuyin');
+							ui.btnMsgType.classList.remove('jianpan');
 							ui.boxMsgText.blur();
 							document.body.focus();
 						} else if (this.classList.contains('jianpan')) {
 							this.classList.add('icon-biaoqing');
 							this.classList.remove('jianpan');
 							
+							ui.boxMsgText.style.display = 'block';
+							ui.boxMsgSound.style.display = 'none';
 							
 							document.querySelector('#biaoqingbao').style.display = 'none';
 							document.querySelector('#Gallery').style.display = 'none';
