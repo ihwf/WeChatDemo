@@ -222,9 +222,9 @@
 											<template v-if='z == friend.zan[friend.zan.length-1]'>
 												{{ z }}
 											</template>
-											<tempalte v-else>
+											<template v-else>
 												{{ z }},
-											</tempalte>
+											</template>
 										</template>
 									</p>
 								</div>
@@ -233,13 +233,13 @@
 							<div class="comment-content">
 								<template v-for='comment in friend.comments'>
 									<template v-if='comment.to'>
-										<div style="margin-top: 3px;margin-bottom: 3px;">
-											<a href="">{{ comment.from }}</a>回复<a href="">{{comment.to}}</a>：{{comment.content}}
+										<div style="margin-top: 3px;margin-bottom: 3px;" :from='comment.from' :to='comment.to' @click='dakaipinglun(index, comment.from)'>
+											<a>{{ comment.from }}</a>回复<a href="">{{comment.to}}</a>：{{comment.content}}
 										</div>
 									</template>
 									<template v-else>
-										<div style="margin-top: 3px;margin-bottom: 3px;">
-											<a href="">{{ comment.from }}</a>：{{ comment.content }}
+										<div style="margin-top: 3px;margin-bottom: 3px;" :from='comment.from' @click='dakaipinglun(index, comment.from)'>
+											<a>{{ comment.from }}</a>：{{ comment.content }}
 										</div>
 									</template>
 								</template>
@@ -251,7 +251,7 @@
 				<div style="clear:both;"></div>
 				<nav class="mui-bar mui-bar-tab" v-if='friend.pinglun'>
 					<input type="text" name="pinglun" id="pinglun" value="" style="width: 80%;"/>
-					<button @click='pinglun(index)'>发送</button>
+					<button @click='pinglun(friend.args)'>发送</button>
 				</nav>
 			</div>
 			
@@ -265,6 +265,10 @@
 		    data: {
 		        friends: [
 		        		{	
+		        			args: {
+		        				id: '',
+		        				to: '',
+		        			},
 		        			pinglun: false,
 		        			dianzan: '点赞',
 		        			logo: 'images/999pic_5281c33cbc368.jpg',
@@ -280,6 +284,10 @@
 		        			comments: '',
 		        		},
 		        		{	
+		        			args: {
+		        				id: '',
+		        				to: '',
+		        			},
 		        			pinglun: false,
 		        			dianzan: '点赞',
 		        			logo: 'images/999pic_5281c33cbc368.jpg',
@@ -324,11 +332,15 @@
 		        			this.friends[id].dianzan = '取消'
 		        		}
 		        },
-		        dakaipinglun: function(id){
+		        dakaipinglun: function(id, to){
+		        		this.friends[id].args.id = id;
+		        		this.friends[id].args.to = to;
 		        		this.friends[id].pinglun = true;
 		        		document.getElementById('pinglun').focus();
 		        },
-		        pinglun: function(id) {
+		        pinglun: function(args) {
+		        		var id = args.id;
+		        		var to = args.to;
 		        		self = document.getElementById('pinglun');
 		        		pinglun = self.value;
 		        		if(this.friends[id].comments == ''){
@@ -336,7 +348,7 @@
 		        		}
 		        		this.friends[id].comments.push({
 			        			from: '阿d',
-			        			to: '',
+			        			to: to,
 			        			content: pinglun,
 			        	});
 			        	this.friends[id].pinglun = false;
