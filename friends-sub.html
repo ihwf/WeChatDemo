@@ -249,9 +249,14 @@
 					</template>
 				</div>
 				<div style="clear:both;"></div>
+				<nav class="mui-bar mui-bar-tab" style="display: block;">
+					<input type="text" name="pinglun" id="pinglun" value="" style="width: 80%;"/>
+					<button @click='pinglun(index)'>发送</button>
+				</nav>
 			</div>
-		
+			
 		</div>
+		
 	</body>
 	<script type="text/javascript">
 		mui.init();
@@ -316,7 +321,17 @@
 		        			this.friends[id].zan.push(name);
 		        			this.friends[id].dianzan = '取消'
 		        		}
-		   
+		        },
+		        dakaipinglun: function(id){
+		        		
+		        },
+		        pinglun: function(id) {
+		        		pinglun = document.getElementById('pinglun').value;
+		        		this.friends[id].comments.push({
+		        			from: '阿d',
+		        			to: '',
+		        			content: pinglun,
+		        		})
 		        }
 		    },
 		    watch: {
