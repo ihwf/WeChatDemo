@@ -6,22 +6,12 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.min.css" rel="stylesheet" />
-		<script type="text/javascript" src="js/vue.js"></script>
 	</head>
 	<style type="text/css">
-		a {
-			color: #616d7d;
-		}
-		body {
-			background-color: white;
-		}
-		.mui-bar.mui-bar-nav {
-			box-shadow: none;
-			-webkit-box-shadow: none;
+		.mui-bar {
 			padding: 0;
-			height: auto;
+			height: 0;
 			position: relative;
-			background-color: inherit;
 		}
 		.header {
 			position: relative;
@@ -41,116 +31,15 @@
 			border: 2px solid white;
 			width: 90px;
 		}
-		.friends {
-			/*background-color: white;*/
-			padding-top: 60px;
-		}
-		.friends-item {
-			box-sizing: border-box;
-			padding: 20px;
-			border-bottom: 1px solid grey;
-		}
-		.item-logo {
-			float: left;
-			display: inline-block;
-			width: 20%;
-			border: 0px solid red;
-		}
-		.item {
-			float: right;
-			display: inline-block;
-			width: 80%;
-			border: 0px solid red;
-		}
-		.item-user {
-			margin-top: 3px;
-			margin-bottom: 3px;
-		}
-		.item > p {
-			font-size: 15px;
-		}
-		.item-url {
-			background-color: #ebebeb;
-			padding: 5px;
-			height: 60px;
-			width: 100%;
-		}
-		.item-url > .item-url-image {
-			float: left;
-		}
-		.item-url-image img {
-			height: 50px;
-			width: 50px;
-		}
-		.item-url > .item-url-detail {
-			float: left;
-			padding-top: 5px;
-			padding-left: 10px;
-			padding-bottom: 5px;
-			/*width: 100%;*/
-			overflow: hidden;
-		}
-		.item-url-detail > p {
-			font-size: 13px;
-			color: black;
-			text-decoration:none; 
-			display:block; 
-			float:left; 
-			width: 180px;
-			overflow: hidden;          /*超出部分隐藏*/
-          	margin-bottom: 0;
-		}
-		.item-footer {
-			padding-top: 10px;
-		}
-		.item-footer > .time {
-			float: left;
-			display: inline-block;
-		}
-		.item-footer > .interact {
-			float: right;
-			display: inline-block;
-		}
-		.mui-table-view.mui-grid-view.mui-grid-9 {
-			background-color: white;
-			border: 0;
-			padding: 0;
-		}
-		.mui-table-view-cell.mui-media.mui-col-xs-4.mui-col-sm-4 {
-			height: 70px;
-			width: 70px;
-			padding: 0;
-			margin-right: 5px;
-			margin-bottom: 5px;
-			border: 0;
-		}
-		.mui-table-view-cell.mui-media.mui-col-xs-4.mui-col-sm-4 > a {
-			padding: 0;
-		}
-		.menu {
-			float: right;
-			background-color: #373b3e;
-			height: 30px;
-			border-radius: 3px;
-			margin-right: 10px;
-		}
-		.menu > .menu-a {
-			line-height: 30px;
-			color: white;
-			padding: 20px;
-			text-align: center;
-		}
-		.comment {
-			font-size: 14px;
-			background-color: #efefef;
-			padding: 7px;
 		.user h4{
 			color: white;
 			float: left;
 			padding-top: 13%;
 			margin-right: 15px;
+			font-size: 16px;
 		}
 	</style>
+
 	<body>
 		<script src="js/mui.min.js"></script>
 		<header class="mui-bar mui-bar-nav">
@@ -160,187 +49,8 @@
 					<img src="images/999pic_5281c33cbc368.jpg" alt="" class="user-image"/>
 				</div>
 		</header>
-		<div class="friends" id="app">
-			<div class="friends-item" v-for='(friend, index) in friends' :id='index'>
-				<div class="item-logo">
-					<img :src="friend.logo" alt="" style="height: 50px;"/>
-				</div>
-				<div class="item">
-					<div class="item-user">
-						<a href="#">{{ friend.user }}</a>
-					</div>
-					<p style="14px">{{ friend.content }}</p>
-					<template v-if='friend.images.length == 1'>
-						<div class="item-image mui-row" style="padding-left: 5px;">
-						<ul class="mui-table-view mui-grid-view mui-grid-9">
-				            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
-				                    <img src="images/1.jpg" style="height: 100px;"/></li>
-				        </ul>
-					</div>
-					</template>
-					<template v-else>
-						<div class="item-image mui-row" style="padding-left: 5px;">
-						<ul class="mui-table-view mui-grid-view mui-grid-9">
-				            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for='image in friend.images'><a href="#">
-				                    <img :src="image" style="height: 100px;"/></li>
-				        </ul>
-					</div>
-					</template>
-					<template v-if='friend.url'>
-						<div class="item-url">
-							<div class="item-url-image">
-								<img :src="friend.url.image" alt="" />
-							</div>
-							<div class="item-url-detail">
-								<p>{{ friend.url.detail }}</p>
-							</div>
-						</div>
-					</template>
-					
-					<div class="item-footer">
-						<div class="interact">
-							<div class="mui-btn" style="padding: 0;border-radius: 0;float: right;">
-								<i class="mui-icon mui-icon-more" id="openPopover"></i>
-							</div>
-							<div class="menu">
-								<a @click='zan(index)' class="menu-a">{{ friend.dianzan }}</a>
-								<a href="#" class="menu-a">评论</a>
-							</div>
-						</div>
-						<div class="time">
-							<p>1小时前</p>
-						</div>
-						<div style="clear:both;"></div>
-					</div>
-					<template v-if='friend.zan || friend.comments'>
-						<div class="comment">
-							<template v-if='friend.zan'>
-								<div class="zan" style="border-bottom: 1px solid red;">
-									<p style="color: #616d7d;margin-bottom: 7px;">
-										<span><i class="mui-icon mui-icon-star"></i></span>
-										<template v-for='z in friend.zan'>
-											<template v-if='z == friend.zan[friend.zan.length-1]'>
-												{{ z }}
-											</template>
-											<tempalte v-else>
-												{{ z }},
-											</tempalte>
-										</template>
-									</p>
-								</div>
-							</template>
-							<template v-if='friend.comments'>
-							<div class="comment-content">
-								<template v-for='comment in friend.comments'>
-									<template v-if='comment.to'>
-										<div style="margin-top: 3px;margin-bottom: 3px;">
-											<a href="">{{ comment.from }}</a>回复<a href="">{{comment.to}}</a>：{{comment.content}}
-										</div>
-									</template>
-									<template v-else>
-										<div style="margin-top: 3px;margin-bottom: 3px;">
-											<a href="">{{ comment.from }}</a>：{{ comment.content }}
-										</div>
-									</template>
-								</template>
-							</div>
-							</template>
-						</div>
-					</template>
-				</div>
-				<div style="clear:both;"></div>
-				<nav class="mui-bar mui-bar-tab" style="display: block;">
-					<input type="text" name="pinglun" id="pinglun" value="" style="width: 80%;"/>
-					<button @click='pinglun(index)'>发送</button>
-				</nav>
-			</div>
-			
+		<div class="mui-content">
 		</div>
-		
 	</body>
-	<script type="text/javascript">
-		mui.init();
-		new Vue({
-			el: '#app',
-		    data: {
-		        friends: [
-		        		{	
-		        			dianzan: '点赞',
-		        			logo: 'images/999pic_5281c33cbc368.jpg',
-		        			user: 'abc',
-		        			content: '不是吧，今天居然要上课！😈',
-		        			images: ['images/1.jpg', 'images/2.jpg', 'images/3.jpg'],
-		        			url: {
-		        				image: 'images/cbd.jpg',
-		        				detail: '大润发购物广场11月7日（星期一大润发购物广场（星期一'
-		        			},
-		        			time: '',
-		        			zan: '',
-		        			comments: '',
-		        		},
-		        		{	
-		        			dianzan: '点赞',
-		        			logo: 'images/999pic_5281c33cbc368.jpg',
-		        			user: 'abc',
-		        			content: '不是吧，今天居然要上课！😈',
-		        			images: ['images/1.jpg', 'images/1.jpg', 'images/1.jpg'],
-		        			url: '',
-		        			time: '',
-		        			zan: ['马云','马化腾'],
-	        				comments: [
-	        					{
-	        						from: '马云',
-	        						to: '',
-	        						content: '今晚吃什么？',
-	        					},
-	        					{
-	        						from: '马化腾',
-	        						to: '马云',
-	        						content: '吃牛扒吧!',
-	        					},
-	        				]
-		        		},
-		        ]
-		    },
-		    methods: {
-		        zan: function (id) {
-		        		var name = '阿d'
-		        		if (this.friends[id].zan) {
-		        			if(this.friends[id].zan.indexOf(name) != -1){
-		        				this.friends[id].zan.pop(name);
-		        				if(this.friends[id].zan.length==0){
-		        					this.friends[id].zan = '';
-		        				};
-		        				this.friends[id].dianzan = '点赞';
-		        			}else{
-		        				this.friends[id].zan.push(name);
-		        				this.friends[id].dianzan = '取消'
-		        			}
-		        		} else {
-		        			this.friends[id].zan = [];
-		        			this.friends[id].zan.push(name);
-		        			this.friends[id].dianzan = '取消'
-		        		}
-		        },
-		        dakaipinglun: function(id){
-		        		
-		        },
-		        pinglun: function(id) {
-		        		pinglun = document.getElementById('pinglun').value;
-		        		this.friends[id].comments.push({
-		        			from: '阿d',
-		        			to: '',
-		        			content: pinglun,
-		        		})
-		        }
-		    },
-		    watch: {
-		        'friends': function () {  
-		        }
-		    },
-		    computed: {
-		    },
-		});
-	</script>
 
 </html>

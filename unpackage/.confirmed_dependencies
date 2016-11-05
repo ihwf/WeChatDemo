@@ -9,13 +9,19 @@
 			"css/icons-extra.css",
 			"Chats.html",
 			"css/iconfont.css",
-			"fonts/iconfont.woff"
+			"fonts/iconfont.woff",
+			"images/cbd.jpg",
+			"images/muwu.jpg",
+			"images/logo.png",
+			"Discover.html"
 		],
 		"refer": [
 			"Contacts.html",
 			"Me.html",
 			"Chats.html",
-			"Discover.html"
+			"Discover.html",
+			"search.html",
+			"yuyin.html"
 		]
 	},
 	"Contacts.html": {
@@ -222,6 +228,10 @@
 			"images/QQExpression/91.gif",
 			"images/QQExpression/86.gif",
 			"js/chatView.js"
+		],
+		"refer": [
+			"chats/chatInfo.html",
+			"chats/moreInfo.html"
 		]
 	},
 	"chats/im-chat.html": {
@@ -244,10 +254,7 @@
 			"images/999pic_5281c33cbc368.jpg",
 			"js/mui.min.js",
 			"css/mui.min.css",
-			"images/4.jpg",
-			"images/cbd.jpg",
-			"images/1.jpg",
-			"fonts/mui.ttf"
+			"images/4.jpg"
 		]
 	},
 	"friends.html": {
@@ -259,6 +266,51 @@
 		],
 		"refer": [
 			"friends-sub.html"
+		]
+	},
+	"search.html": {
+		"resources": [
+			"css/search.css",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.woff"
+		]
+	},
+	"yuyin.html": {
+		"resources": [
+			"css/mui.min.css"
+		]
+	},
+	"chats/chatInfo.html": {
+		"resources": [
+			"css/chatInfo.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"chats/%3C%%20header%20%%3E",
+			"%3C%\u003d%20header%20%%3E",
+			"images/logo.png",
+			"fonts/iconfont.woff",
+			"images/cbd.jpg"
+		],
+		"refer": [
+			"chats/moreInfo.html"
+		]
+	},
+	"chats/moreInfo.html": {
+		"resources": [
+			"css/moreInfo.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"images/cbd.jpg"
+		],
+		"refer": [
+			"chats/chatView.html"
 		]
 	}
 }

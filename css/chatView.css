@@ -14,6 +14,18 @@
     left: 55px;
     right: 55px;
 }
+.mui-icon-arrowthinleft::after{
+			position: absolute;
+		    top: 0;
+		    right: 0;
+		    height: 44px;
+		    line-height: 44px;
+		    width: 1px;
+		    content: '';
+		    -webkit-transform:  scaleY(.5);
+		            transform: scaleY(.5);
+		    background-color: #222222;
+}
 .input-text{
 	border: none;
 }
