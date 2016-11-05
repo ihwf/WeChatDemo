@@ -204,7 +204,7 @@
 							</div>
 							<div class="menu">
 								<a @click='zan(index)' class="menu-a">{{ friend.dianzan }}</a>
-								<a href="#" class="menu-a">评论</a>
+								<a class="menu-a" @click='dakaipinglun(index)'>评论</a>
 							</div>
 						</div>
 						<div class="time">
@@ -249,7 +249,7 @@
 					</template>
 				</div>
 				<div style="clear:both;"></div>
-				<nav class="mui-bar mui-bar-tab" style="display: block;">
+				<nav class="mui-bar mui-bar-tab" v-if='friend.pinglun'>
 					<input type="text" name="pinglun" id="pinglun" value="" style="width: 80%;"/>
 					<button @click='pinglun(index)'>发送</button>
 				</nav>
@@ -265,6 +265,7 @@
 		    data: {
 		        friends: [
 		        		{	
+		        			pinglun: false,
 		        			dianzan: '点赞',
 		        			logo: 'images/999pic_5281c33cbc368.jpg',
 		        			user: 'abc',
@@ -279,6 +280,7 @@
 		        			comments: '',
 		        		},
 		        		{	
+		        			pinglun: false,
 		        			dianzan: '点赞',
 		        			logo: 'images/999pic_5281c33cbc368.jpg',
 		        			user: 'abc',
@@ -323,20 +325,24 @@
 		        		}
 		        },
 		        dakaipinglun: function(id){
-		        		
+		        		this.friends[id].pinglun = true;
+		        		document.getElementById('pinglun').focus();
 		        },
 		        pinglun: function(id) {
-		        		pinglun = document.getElementById('pinglun').value;
+		        		self = document.getElementById('pinglun');
+		        		pinglun = self.value;
+		        		if(this.friends[id].comments == ''){
+		        			this.friends[id].comments = [];
+		        		}
 		        		this.friends[id].comments.push({
-		        			from: '阿d',
-		        			to: '',
-		        			content: pinglun,
-		        		})
+			        			from: '阿d',
+			        			to: '',
+			        			content: pinglun,
+			        	});
+			        	this.friends[id].pinglun = false;
 		        }
 		    },
 		    watch: {
-		        'friends': function () {  
-		        }
 		    },
 		    computed: {
 		    },
