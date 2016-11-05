@@ -233,3 +233,7 @@ to {
 .mui-icon-paperplane{
 	display: none;
 }
+#msg-sound {
+    width: 115%;
+    z-index: 1000;
+}
