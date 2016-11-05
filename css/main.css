@@ -3,6 +3,10 @@
 	box-shadow: none;
 	z-index: 1000;
 }
+.mui-bar-nav a:first-child {
+	font-size: 32px !important;
+	padding-top: 5px !important;
+}
 .mui-bar .mui-title{
 	color: white;
 	text-align: left;
@@ -14,7 +18,7 @@
 	
 }
 .mui-bar-nav.mui-bar .mui-icon {
-    padding-right: 25px;
+    padding-right: 15px;
 }
 .mui-active span{
 	color: green;
