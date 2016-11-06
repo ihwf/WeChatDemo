@@ -262,7 +262,8 @@
 					"css/mui.min.css"
 				],
 				"refer": [
-					"friends.html"
+					"friends.html",
+					"gouwu.html"
 				],
 				"priority": 0
 			},
@@ -455,7 +456,14 @@
 					"images/999pic_5281c33cbc368.jpg",
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"images/4.jpg"
+					"images/4.jpg",
+					"images/2.jpg",
+					"js/vue.js",
+					"images/1.jpg",
+					"images/3.jpg",
+					"images/cbd.jpg",
+					"fonts/mui.ttf",
+					"refresh.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -467,7 +475,9 @@
 					"js/mui.min.js",
 					"css/mui.min.css"
 				],
-				"refer": [],
+				"refer": [
+					"friend-send.html"
+				],
 				"priority": 0
 			},
 			"search.html": {
@@ -519,6 +529,26 @@
 				"refer": [
 					"chats/chatView.html"
 				],
+				"priority": 0
+			},
+			"gouwu.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"friend-send.html": {
+				"resources": [
+					"fonts/mui-icons-extra.ttf",
+					"css/icons-extra.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},

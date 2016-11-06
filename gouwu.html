@@ -35,43 +35,20 @@
 	</style>
 	<body>
 		<script src="js/mui.min.js"></script>
-		<header class="mui-bar mui-bar-nav" style="background-color: #393a3e;" id="header">
+		<header class="mui-bar mui-bar-nav" style="background-color: #393a3e;">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-		    	<h4 class="mui-pull-left">朋友圈</h4>
-		    	<i class="mui-icon mui-icon-camera mui-pull-right" style="color: white;" id="send"></i>
+		    	<h4 class="mui-pull-left">购物</h4>
 		</header>
 		<script type="text/javascript">
 			mui.init({
 			    subpages:[{
-			      url: 'friends-sub.html',//子页面HTML地址，支持本地地址和网络地址
-			      id: 'friends-sub.html',//子页面标志
+			      url: 'http://3.cn',//子页面HTML地址，支持本地地址和网络地址
+			      id: 'JD',//子页面标志
 			      styles:{
 			        top: '44px',//子页面顶部位置
-			        button: '55px',
 			      },
-			      extras:{}//额外扩展参数
 			    }]
 			  });
-			  mui('#header').on('tap','#send',function() {
-//		 		var titleName = this.getAttribute('title');
-//		 		var headerImg = this.querySelector('img').getAttribute('src');
-		 		mui.openWindow({
-		 			url:'friend-send.html',
-		 			id:'friend-send.html',
-		 			
-		 			show:{
-		 				autoShow:true,
-		 				aniShow:'slide-in-right',
-		 				duration:100
-		 			},
-		 			waiting:{
-		 				autoShow:true,
-		 				title:'waiting...'
-		 			},
-		 			extras:{
-		 			}
-		 		})
-		 	});
 		</script>
 	</body>
 </html>
