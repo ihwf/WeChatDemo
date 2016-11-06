@@ -229,7 +229,10 @@
 					"css/iconfont.css",
 					"fonts/iconfont.woff"
 				],
-				"refer": [],
+				"refer": [
+					"chats/chatInfo.html",
+					"chats/moreInfo.html"
+				],
 				"priority": 0
 			},
 			"Chats.html": {
@@ -426,7 +429,8 @@
 					"images/QQExpression/126.gif",
 					"images/QQExpression/91.gif",
 					"images/QQExpression/86.gif",
-					"js/chatView.js"
+					"js/chatView.js",
+					"images/shuijiao.jpg"
 				],
 				"refer": [
 					"chats/chatInfo.html",
@@ -528,7 +532,8 @@
 					"fonts/mui.ttf",
 					"css/iconfont.css",
 					"css/mui.min.css",
-					"images/cbd.jpg"
+					"images/cbd.jpg",
+					"images/shuijiao.jpg"
 				],
 				"refer": [
 					"chats/chatView.html"
