@@ -463,7 +463,9 @@
 					"images/3.jpg",
 					"images/cbd.jpg",
 					"fonts/mui.ttf",
-					"refresh.html"
+					"refresh.html",
+					"css/friendsfont.css",
+					"fonts/friends.woff"
 				],
 				"refer": [],
 				"priority": 0
@@ -473,7 +475,9 @@
 					"friends-sub.html",
 					"fonts/mui.ttf",
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"fonts/friends.woff",
+					"css/friendsfont.css"
 				],
 				"refer": [
 					"friend-send.html"

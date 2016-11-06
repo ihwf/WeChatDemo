@@ -1,344 +1,348 @@
 {
-  "index.html": {
-    "resources": [
-      "fonts/mui-icons-extra.ttf",
-      "css/main.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/icons-extra.css",
-      "Chats.html",
-      "css/iconfont.css",
-      "fonts/iconfont.woff",
-      "images/cbd.jpg",
-      "images/muwu.jpg",
-      "images/logo.png",
-      "Discover.html"
-    ],
-    "refer": [
-      "Contacts.html",
-      "Me.html",
-      "Chats.html",
-      "Discover.html",
-      "search.html",
-      "yuyin.html"
-    ]
-  },
-  "Contacts.html": {
-    "resources": [
-      "css/mui.indexedlist.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "js/mui.indexedlist.js",
-      "css/main.css",
-      "images/shuijiao.jpg",
-      "css/contacts.css",
-      "css/iconfont.css",
-      "fonts/iconfont.woff"
-    ]
-  },
-  "Chats.html": {
-    "resources": [
-      "images/cbd.jpg",
-      "images/muwu.jpg",
-      "images/logo.png",
-      "css/main.css",
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": [
-      "Contacts.html",
-      "chats/chatView.html",
-      "chats/im-chat.html"
-    ]
-  },
-  "Discover.html": {
-    "resources": [
-      "images/afyx.png",
-      "images/afpl.png",
-      "images/aff.png",
-      "images/afy.png",
-      "images/afg.png",
-      "css/discover.css",
-      "images/afs.png",
-      "images/afp.png",
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": [
-      "friends.html",
-      "gouwu.html"
-    ]
-  },
-  "Me.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "images/cbd.jpg",
-      "css/me.css",
-      "images/afy.png",
-      "css/iconfont.css",
-      "images/afs.png",
-      "fonts/iconfont.woff"
-    ]
-  },
-  "chats/chatView.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/chatView.css",
-      "css/iconfont.css",
-      "fonts/iconfont.woff",
-      "js/mui.imageViewer.js",
-      "css/im-chat.css",
-      "css/app.css",
-      "css/mui.imageviewer.css",
-      "js/arttmpl.js",
-      "images/logo.png",
-      "images/yuyin.png",
-      "css/chatViewFont.css",
-      "fonts/chatView.woff",
-      "images/muwu.jpg",
-      "images/cbd.jpg",
-      "images/QQExpression/49.gif",
-      "images/QQExpression/60.gif",
-      "images/QQExpression/36.gif",
-      "images/QQExpression/115.gif",
-      "images/QQExpression/21.gif",
-      "images/QQExpression/93.gif",
-      "images/QQExpression/53.gif",
-      "images/QQExpression/116.gif",
-      "images/QQExpression/78.gif",
-      "images/QQExpression/7.gif",
-      "images/QQExpression/70.gif",
-      "images/QQExpression/74.gif",
-      "images/QQExpression/71.gif",
-      "images/QQExpression/10.gif",
-      "images/QQExpression/46.gif",
-      "images/QQExpression/23.gif",
-      "images/QQExpression/96.gif",
-      "images/QQExpression/9.gif",
-      "images/QQExpression/117.gif",
-      "images/QQExpression/13.gif",
-      "images/QQExpression/22.gif",
-      "images/QQExpression/129.gif",
-      "images/QQExpression/111.gif",
-      "images/QQExpression/77.gif",
-      "images/QQExpression/128.gif",
-      "images/QQExpression/72.gif",
-      "images/QQExpression/118.gif",
-      "images/QQExpression/20.gif",
-      "images/QQExpression/87.gif",
-      "images/QQExpression/11.gif",
-      "images/QQExpression/112.gif",
-      "images/QQExpression/61.gif",
-      "images/QQExpression/125.gif",
-      "images/QQExpression/62.gif",
-      "images/QQExpression/124.gif",
-      "images/QQExpression/59.gif",
-      "images/QQExpression/114.gif",
-      "images/QQExpression/41.gif",
-      "images/QQExpression/15.gif",
-      "images/QQExpression/108.gif",
-      "images/QQExpression/123.gif",
-      "images/QQExpression/66.gif",
-      "images/QQExpression/47.gif",
-      "images/QQExpression/103.gif",
-      "images/QQExpression/34.gif",
-      "images/QQExpression/58.gif",
-      "images/QQExpression/24.gif",
-      "images/QQExpression/84.gif",
-      "images/QQExpression/65.gif",
-      "images/QQExpression/29.gif",
-      "images/QQExpression/89.gif",
-      "images/QQExpression/88.gif",
-      "images/QQExpression/110.gif",
-      "images/QQExpression/4.gif",
-      "images/QQExpression/54.gif",
-      "images/QQExpression/43.gif",
-      "images/QQExpression/12.gif",
-      "images/QQExpression/76.gif",
-      "images/QQExpression/100.gif",
-      "images/QQExpression/5.gif",
-      "images/QQExpression/8.gif",
-      "images/QQExpression/16.gif",
-      "images/QQExpression/97.gif",
-      "images/QQExpression/42.gif",
-      "images/QQExpression/26.gif",
-      "images/QQExpression/48.gif",
-      "images/QQExpression/51.gif",
-      "images/QQExpression/1.gif",
-      "images/QQExpression/31.gif",
-      "images/QQExpression/85.gif",
-      "images/QQExpression/122.gif",
-      "images/QQExpression/44.gif",
-      "images/QQExpression/56.gif",
-      "images/QQExpression/57.gif",
-      "images/QQExpression/2.gif",
-      "images/QQExpression/50.gif",
-      "images/QQExpression/39.gif",
-      "images/QQExpression/32.gif",
-      "images/QQExpression/120.gif",
-      "images/QQExpression/82.gif",
-      "images/QQExpression/121.gif",
-      "images/QQExpression/40.gif",
-      "images/QQExpression/38.gif",
-      "images/QQExpression/109.gif",
-      "images/QQExpression/106.gif",
-      "images/QQExpression/35.gif",
-      "images/QQExpression/28.gif",
-      "images/QQExpression/81.gif",
-      "images/QQExpression/127.gif",
-      "images/QQExpression/27.gif",
-      "images/QQExpression/14.gif",
-      "images/QQExpression/80.gif",
-      "images/QQExpression/95.gif",
-      "images/QQExpression/113.gif",
-      "images/QQExpression/104.gif",
-      "images/QQExpression/52.gif",
-      "images/QQExpression/83.gif",
-      "images/QQExpression/94.gif",
-      "images/QQExpression/33.gif",
-      "images/QQExpression/25.gif",
-      "images/QQExpression/98.gif",
-      "images/QQExpression/55.gif",
-      "images/QQExpression/45.gif",
-      "images/QQExpression/69.gif",
-      "images/QQExpression/79.gif",
-      "images/QQExpression/99.gif",
-      "images/QQExpression/18.gif",
-      "images/QQExpression/37.gif",
-      "images/QQExpression/3.gif",
-      "images/QQExpression/17.gif",
-      "images/QQExpression/64.gif",
-      "images/QQExpression/119.gif",
-      "images/QQExpression/6.gif",
-      "images/QQExpression/68.gif",
-      "images/QQExpression/92.gif",
-      "images/QQExpression/19.gif",
-      "images/QQExpression/30.gif",
-      "images/QQExpression/67.gif",
-      "images/QQExpression/132.gif",
-      "images/QQExpression/73.gif",
-      "images/QQExpression/63.gif",
-      "images/QQExpression/75.gif",
-      "images/QQExpression/90.gif",
-      "images/QQExpression/126.gif",
-      "images/QQExpression/91.gif",
-      "images/QQExpression/86.gif",
-      "js/chatView.js"
-    ],
-    "refer": [
-      "chats/chatInfo.html",
-      "chats/moreInfo.html"
-    ]
-  },
-  "chats/im-chat.html": {
-    "resources": [
-      "js/mui.imageViewer.js",
-      "css/app.css",
-      "fonts/mui.ttf",
-      "css/mui.imageviewer.css",
-      "js/arttmpl.js",
-      "images/logo.png",
-      "css/im-chat.css",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "css/chatView.css"
-    ]
-  },
-  "friends-sub.html": {
-    "resources": [
-      "images/5.jpg",
-      "images/999pic_5281c33cbc368.jpg",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "images/4.jpg",
-      "images/2.jpg",
-      "js/vue.js",
-      "images/1.jpg",
-      "images/3.jpg",
-      "images/cbd.jpg",
-      "fonts/mui.ttf",
-      "refresh.html"
-    ],
-    "refer": [
-      "refresh.html"
-    ]
-  },
-  "friends.html": {
-    "resources": [
-      "friends-sub.html",
-      "fonts/mui.ttf",
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": [
-      "friends-sub.html",
-      "friend-send.html"
-    ]
-  },
-  "search.html": {
-    "resources": [
-      "css/search.css",
-      "fonts/mui.ttf",
-      "js/mui.min.js",
-      "css/iconfont.css",
-      "css/mui.min.css",
-      "fonts/iconfont.woff"
-    ]
-  },
-  "yuyin.html": {
-    "resources": [
-      "css/mui.min.css"
-    ]
-  },
-  "chats/chatInfo.html": {
-    "resources": [
-      "css/chatInfo.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/iconfont.css",
-      "css/mui.min.css",
-      "chats/%3C%%20header%20%%3E",
-      "%3C%\u003d%20header%20%%3E",
-      "images/logo.png",
-      "fonts/iconfont.woff",
-      "images/cbd.jpg"
-    ],
-    "refer": [
-      "chats/moreInfo.html"
-    ]
-  },
-  "chats/moreInfo.html": {
-    "resources": [
-      "css/moreInfo.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/iconfont.css",
-      "css/mui.min.css",
-      "images/cbd.jpg"
-    ],
-    "refer": [
-      "chats/chatView.html"
-    ]
-  },
-  "gouwu.html": {
-    "resources": [
-      "fonts/mui.ttf",
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ]
-  },
-  "friend-send.html": {
-    "resources": [
-      "fonts/mui-icons-extra.ttf",
-      "css/icons-extra.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css"
-    ]
-  }
+	"index.html": {
+		"resources": [
+			"fonts/mui-icons-extra.ttf",
+			"css/main.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/icons-extra.css",
+			"Chats.html",
+			"css/iconfont.css",
+			"fonts/iconfont.woff",
+			"images/cbd.jpg",
+			"images/muwu.jpg",
+			"images/logo.png",
+			"Discover.html"
+		],
+		"refer": [
+			"Contacts.html",
+			"Me.html",
+			"Chats.html",
+			"Discover.html",
+			"search.html",
+			"yuyin.html"
+		]
+	},
+	"Contacts.html": {
+		"resources": [
+			"css/mui.indexedlist.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/mui.indexedlist.js",
+			"css/main.css",
+			"images/shuijiao.jpg",
+			"css/contacts.css",
+			"css/iconfont.css",
+			"fonts/iconfont.woff"
+		]
+	},
+	"Chats.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"images/muwu.jpg",
+			"images/logo.png",
+			"css/main.css",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"Contacts.html",
+			"chats/chatView.html",
+			"chats/im-chat.html"
+		]
+	},
+	"Discover.html": {
+		"resources": [
+			"images/afyx.png",
+			"images/afpl.png",
+			"images/aff.png",
+			"images/afy.png",
+			"images/afg.png",
+			"css/discover.css",
+			"images/afs.png",
+			"images/afp.png",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"friends.html",
+			"gouwu.html"
+		]
+	},
+	"Me.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/cbd.jpg",
+			"css/me.css",
+			"images/afy.png",
+			"css/iconfont.css",
+			"images/afs.png",
+			"fonts/iconfont.woff"
+		]
+	},
+	"chats/chatView.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/chatView.css",
+			"css/iconfont.css",
+			"fonts/iconfont.woff",
+			"js/mui.imageViewer.js",
+			"css/im-chat.css",
+			"css/app.css",
+			"css/mui.imageviewer.css",
+			"js/arttmpl.js",
+			"images/logo.png",
+			"images/yuyin.png",
+			"css/chatViewFont.css",
+			"fonts/chatView.woff",
+			"images/muwu.jpg",
+			"images/cbd.jpg",
+			"images/QQExpression/49.gif",
+			"images/QQExpression/60.gif",
+			"images/QQExpression/36.gif",
+			"images/QQExpression/115.gif",
+			"images/QQExpression/21.gif",
+			"images/QQExpression/93.gif",
+			"images/QQExpression/53.gif",
+			"images/QQExpression/116.gif",
+			"images/QQExpression/78.gif",
+			"images/QQExpression/7.gif",
+			"images/QQExpression/70.gif",
+			"images/QQExpression/74.gif",
+			"images/QQExpression/71.gif",
+			"images/QQExpression/10.gif",
+			"images/QQExpression/46.gif",
+			"images/QQExpression/23.gif",
+			"images/QQExpression/96.gif",
+			"images/QQExpression/9.gif",
+			"images/QQExpression/117.gif",
+			"images/QQExpression/13.gif",
+			"images/QQExpression/22.gif",
+			"images/QQExpression/129.gif",
+			"images/QQExpression/111.gif",
+			"images/QQExpression/77.gif",
+			"images/QQExpression/128.gif",
+			"images/QQExpression/72.gif",
+			"images/QQExpression/118.gif",
+			"images/QQExpression/20.gif",
+			"images/QQExpression/87.gif",
+			"images/QQExpression/11.gif",
+			"images/QQExpression/112.gif",
+			"images/QQExpression/61.gif",
+			"images/QQExpression/125.gif",
+			"images/QQExpression/62.gif",
+			"images/QQExpression/124.gif",
+			"images/QQExpression/59.gif",
+			"images/QQExpression/114.gif",
+			"images/QQExpression/41.gif",
+			"images/QQExpression/15.gif",
+			"images/QQExpression/108.gif",
+			"images/QQExpression/123.gif",
+			"images/QQExpression/66.gif",
+			"images/QQExpression/47.gif",
+			"images/QQExpression/103.gif",
+			"images/QQExpression/34.gif",
+			"images/QQExpression/58.gif",
+			"images/QQExpression/24.gif",
+			"images/QQExpression/84.gif",
+			"images/QQExpression/65.gif",
+			"images/QQExpression/29.gif",
+			"images/QQExpression/89.gif",
+			"images/QQExpression/88.gif",
+			"images/QQExpression/110.gif",
+			"images/QQExpression/4.gif",
+			"images/QQExpression/54.gif",
+			"images/QQExpression/43.gif",
+			"images/QQExpression/12.gif",
+			"images/QQExpression/76.gif",
+			"images/QQExpression/100.gif",
+			"images/QQExpression/5.gif",
+			"images/QQExpression/8.gif",
+			"images/QQExpression/16.gif",
+			"images/QQExpression/97.gif",
+			"images/QQExpression/42.gif",
+			"images/QQExpression/26.gif",
+			"images/QQExpression/48.gif",
+			"images/QQExpression/51.gif",
+			"images/QQExpression/1.gif",
+			"images/QQExpression/31.gif",
+			"images/QQExpression/85.gif",
+			"images/QQExpression/122.gif",
+			"images/QQExpression/44.gif",
+			"images/QQExpression/56.gif",
+			"images/QQExpression/57.gif",
+			"images/QQExpression/2.gif",
+			"images/QQExpression/50.gif",
+			"images/QQExpression/39.gif",
+			"images/QQExpression/32.gif",
+			"images/QQExpression/120.gif",
+			"images/QQExpression/82.gif",
+			"images/QQExpression/121.gif",
+			"images/QQExpression/40.gif",
+			"images/QQExpression/38.gif",
+			"images/QQExpression/109.gif",
+			"images/QQExpression/106.gif",
+			"images/QQExpression/35.gif",
+			"images/QQExpression/28.gif",
+			"images/QQExpression/81.gif",
+			"images/QQExpression/127.gif",
+			"images/QQExpression/27.gif",
+			"images/QQExpression/14.gif",
+			"images/QQExpression/80.gif",
+			"images/QQExpression/95.gif",
+			"images/QQExpression/113.gif",
+			"images/QQExpression/104.gif",
+			"images/QQExpression/52.gif",
+			"images/QQExpression/83.gif",
+			"images/QQExpression/94.gif",
+			"images/QQExpression/33.gif",
+			"images/QQExpression/25.gif",
+			"images/QQExpression/98.gif",
+			"images/QQExpression/55.gif",
+			"images/QQExpression/45.gif",
+			"images/QQExpression/69.gif",
+			"images/QQExpression/79.gif",
+			"images/QQExpression/99.gif",
+			"images/QQExpression/18.gif",
+			"images/QQExpression/37.gif",
+			"images/QQExpression/3.gif",
+			"images/QQExpression/17.gif",
+			"images/QQExpression/64.gif",
+			"images/QQExpression/119.gif",
+			"images/QQExpression/6.gif",
+			"images/QQExpression/68.gif",
+			"images/QQExpression/92.gif",
+			"images/QQExpression/19.gif",
+			"images/QQExpression/30.gif",
+			"images/QQExpression/67.gif",
+			"images/QQExpression/132.gif",
+			"images/QQExpression/73.gif",
+			"images/QQExpression/63.gif",
+			"images/QQExpression/75.gif",
+			"images/QQExpression/90.gif",
+			"images/QQExpression/126.gif",
+			"images/QQExpression/91.gif",
+			"images/QQExpression/86.gif",
+			"js/chatView.js"
+		],
+		"refer": [
+			"chats/chatInfo.html",
+			"chats/moreInfo.html"
+		]
+	},
+	"chats/im-chat.html": {
+		"resources": [
+			"js/mui.imageViewer.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.imageviewer.css",
+			"js/arttmpl.js",
+			"images/logo.png",
+			"css/im-chat.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/chatView.css"
+		]
+	},
+	"friends-sub.html": {
+		"resources": [
+			"images/5.jpg",
+			"images/999pic_5281c33cbc368.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"images/4.jpg",
+			"images/2.jpg",
+			"js/vue.js",
+			"images/1.jpg",
+			"images/3.jpg",
+			"images/cbd.jpg",
+			"fonts/mui.ttf",
+			"refresh.html",
+			"css/friendsfont.css",
+			"fonts/friends.woff"
+		],
+		"refer": [
+			"refresh.html"
+		]
+	},
+	"friends.html": {
+		"resources": [
+			"friends-sub.html",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/friends.woff",
+			"css/friendsfont.css"
+		],
+		"refer": [
+			"friends-sub.html",
+			"friend-send.html"
+		]
+	},
+	"search.html": {
+		"resources": [
+			"css/search.css",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.woff"
+		]
+	},
+	"yuyin.html": {
+		"resources": [
+			"css/mui.min.css"
+		]
+	},
+	"chats/chatInfo.html": {
+		"resources": [
+			"css/chatInfo.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"chats/%3C%%20header%20%%3E",
+			"%3C%\u003d%20header%20%%3E",
+			"images/logo.png",
+			"fonts/iconfont.woff",
+			"images/cbd.jpg"
+		],
+		"refer": [
+			"chats/moreInfo.html"
+		]
+	},
+	"chats/moreInfo.html": {
+		"resources": [
+			"css/moreInfo.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"images/cbd.jpg"
+		],
+		"refer": [
+			"chats/chatView.html"
+		]
+	},
+	"gouwu.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"friend-send.html": {
+		"resources": [
+			"fonts/mui-icons-extra.ttf",
+			"css/icons-extra.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	}
 }

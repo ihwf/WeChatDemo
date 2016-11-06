@@ -6,6 +6,7 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/friendsfont.css" rel="stylesheet" />
 		<script type="text/javascript" src="js/vue.js"></script>
 	</head>
 	<style type="text/css">
@@ -43,23 +44,25 @@
 		}
 		.friends {
 			/*background-color: white;*/
-			padding-top: 60px;
+			/*padding-top: 60px;*/
 		}
 		.friends-item {
 			box-sizing: border-box;
 			padding: 20px;
 			border-bottom: 1px solid grey;
+			position: relative;
+			height: 300px;
 		}
 		.item-logo {
 			float: left;
 			display: inline-block;
-			width: 20%;
 			border: 0px solid red;
 		}
 		.item {
 			float: right;
 			display: inline-block;
 			width: 80%;
+			position: absolute;
 			border: 0px solid red;
 		}
 		.item-user {
@@ -144,23 +147,25 @@
 			font-size: 14px;
 			background-color: #efefef;
 			padding: 7px;
+			}
 		.user h4{
 			color: white;
 			float: left;
 			padding-top: 13%;
 			margin-right: 15px;
 		}
+		
 	</style>
 	<body>
 		<script src="js/mui.min.js"></script>
 		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
 		  <div class="mui-scroll">
 		    <!--数据列表-->
-		    <ul class="mui-table-view mui-table-view-chevron">
+		    <ul class="">
 		      
 		    </ul>
 		  </div>
-		</div>
+		
 		<header class="mui-bar mui-bar-nav">
 		    <img src="images/4.jpg" width="100%"/>
 		    <div class="user">
@@ -207,12 +212,12 @@
 					
 					<div class="item-footer">
 						<div class="interact">
-							<div class="mui-btn" style="padding: 0;border-radius: 0;float: right;">
-								<i class="mui-icon mui-icon-more" id="openPopover"></i>
+							<div class="mui-btn" style="padding: 0;border-radius: 0;float: right;border: none;background-color: transparent;">
+								<i class="iconfont Comment" id="openPopover" style="font-size:x-large !important;"></i>
 							</div>
-							<div class="menu">
-								<a @click='zan(index)' class="menu-a">{{ friend.dianzan }}</a>
-								<a class="menu-a" @click='dakaipinglun(index)'>评论</a>
+							<div class="menu " style="display: none;">
+								<a @click='zan(index)' class="menu-a iconfont zan-copy">{{ friend.dianzan }}</a>
+								<a class="menu-a iconfont pinglun" @click='dakaipinglun(index)'>评论</a>
 							</div>
 						</div>
 						<div class="time">
@@ -223,9 +228,9 @@
 					<template v-if='friend.zan || friend.comments'>
 						<div class="comment">
 							<template v-if='friend.zan'>
-								<div class="zan" style="border-bottom: 1px solid red;">
+								<div class="zan" style="border-bottom: 1px solid #C8C8C8;">
 									<p style="color: #616d7d;margin-bottom: 7px;">
-										<span><i class="mui-icon mui-icon-star"></i></span>
+										<span><i class="mui-icon iconfont zan-copy"></i></span>
 										<template v-for='z in friend.zan'>
 											<template v-if='z == friend.zan[friend.zan.length-1]'>
 												{{ z }}
@@ -262,7 +267,7 @@
 					<button @click='pinglun(friend.args)'>发送</button>
 				</nav>
 			</div>
-			
+			</div>
 		</div>
 		
 	</body>
@@ -389,7 +394,8 @@
 		});
 		function pullfresh_function() {
 		     //业务逻辑代码，比如通过ajax从服务器获取新数据
-		     friends = JSON.parse(plus.storage.getItem('friends'));
+		     var friends = [];
+		     var friends = JSON.parse(plus.storage.getItem('friends'));
 		     console.log(friends);
 		     for(var i=0; i < friends.length; i++){
 		     	vm.friends.unshift(friends[i]);
@@ -397,6 +403,18 @@
 		     //注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
 		     mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
 		};
+		
+		document.querySelector('#openPopover').addEventListener('click',function() {
+			if(document.querySelector('.menu').style.display == 'block'){
+				document.querySelector('.menu').style.display = 'none';
+			}else{
+				document.querySelector('.menu').style.display = 'block';
+			}
+		});
+		document.querySelector('.menu').addEventListener('click',function() {
+				document.querySelector('.menu').style.display = 'none';
+			
+		});
 	</script>
 
 </html>
