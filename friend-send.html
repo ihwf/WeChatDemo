@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+	</head>
+	<style type="text/css">
+		header a{
+			color: white;
+			margin-right: 0;
+			border-width:50% ;
+		}
+		.mui-icon-left-nav::after{
+			position: absolute;
+		    top: 0;
+		    right: 0;
+		    left: 50px;
+		    height: 44px;
+		    line-height: 44px;
+		    width: 1px;
+		    content: '';
+		    -webkit-transform:  scaleY(.5);
+		            transform: scaleY(.5);
+		    background-color: #222222;
+		}
+		header h4{
+			color: white;margin: 0;
+			padding-left: 10px;
+			line-height: 44px;
+			padding-left: 30px;
+		}
+		.text {
+			background-color: white;
+		}
+		textarea {
+			border: 0;
+			height: 80px;
+			margin: 0;
+		}
+		.item {
+			padding: 10px 15px;
+			background-color: white;
+		}
+		.item h4 {
+			padding-left: 5px;
+		}
+		.item i {
+			color: grey;
+		}
+	</style>
+	<body>
+		<script src="js/mui.min.js"></script>
+		<header class="mui-bar mui-bar-nav" style="background-color: #393a3e;" id="header">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <button class="mui-btn mui-btn-success mui-pull-right" id="send" disabled="true">发送</button>
+		</header>
+		<div class="mui-content">
+		    <div class="text">
+		    		<textarea name="" rows="" cols="3" placeholder="这一刻的想法..." id="text" value=""></textarea>
+		    		<div class="item" style="">
+		    			<i class="mui-icon mui-icon-location" style="display: inline-block;"></i>
+		    			<h4 style="display: inline-block;">所在位置</h4>
+		    		</div>
+		    </div>
+		    <br />
+		    <div id="">
+		    		<div class="item" style="border-bottom: 1px solid grey;">
+		    			<i class="mui-icon mui-icon-eye" style="display: inline-block;"></i>
+		    			<h4 style="display: inline-block;">所在位置</h4>
+		    		</div>
+		    		<div class="item">
+		    			<i class="mui-icon-extra mui-icon-extra-cate" style="display: inline-block;"></i>
+		    			<h4 style="display: inline-block;">所在位置</h4>
+		    		</div>
+		    </div>
+		</div>
+		<script type="text/javascript">
+			mui.init();
+			
+			function setStorage(msg) {
+				var friends = plus.storage.getItem('friends');
+				if (friends == null){
+					alert('is_null!')
+					friends = [];
+				};
+				friend = {	
+		        			args: {
+		        				id: '',
+		        				to: '',
+		        			},
+		        			pinglun: false,
+		        			dianzan: '点赞',
+		        			logo: 'images/999pic_5281c33cbc368.jpg',
+		        			user: '阿d',
+		        			content: msg,
+		        			images: ['images/1.jpg', 'images/2.jpg', 'images/3.jpg'],
+		        			url: '',
+		        			time: '',
+		        			zan: '',
+		        			comments: '',
+		       	};
+		       	friends = JSON.parse(friends);
+		        friends.push(friend);
+		        console.log(friends);
+		        friends = JSON.stringify(friends);
+		        plus.storage.setItem('friends', friends);
+			}
+			document.querySelector('#text').addEventListener('input', function(event) {
+			//						ui.btnMsgImage.classList[ui.boxMsgText.innerHTML == '' ? 'remove' : 'add']('mui-icon-paperplane');
+				if(document.querySelector('#text').value != ''){
+					document.querySelector('#send').disabled = false;
+				}else{
+					document.querySelector('#send').disabled = true;
+				}
+			});
+			mui('#header').on('tap','button',function() {
+//		 		var titleName = this.getAttribute('title');
+//		 		var headerImg = this.querySelector('img').getAttribute('src');
+		 		msg = document.getElementById('text').value;
+		 		console.log(msg);
+		 		setStorage(msg);
+				plus.storage.setItem('key','str');
+		 		console.log(plus.storage.getItem('friends'));
+		 		mui.back();
+		 	});
+		</script>
+	</body>
+</html>

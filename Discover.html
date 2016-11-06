@@ -62,8 +62,8 @@
 		   </ul>
 		   
 		    <ul class="mui-table-view">
-		    	<li class="mui-table-view-cell mui-media">
-			        <a href="javascript:;">
+		    	<li class="mui-table-view-cell mui-media" id="shop">
+			        <a>
 			            <img class="mui-media-object mui-pull-left" src="images/afg.png">
 			            <div class="mui-media-body">
 			                购物
@@ -84,7 +84,6 @@
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
-			
 			document.addEventListener('swipeleft',function() {
 				plus.webview.show('Me.html','slide-in-right',100);
 			});
@@ -98,6 +97,26 @@
 		 		mui.openWindow({
 		 			url:'friends.html',
 		 			id:'friends.html',
+		 			
+		 			show:{
+		 				autoShow:true,
+		 				aniShow:'slide-in-right',
+		 				duration:100
+		 			},
+		 			waiting:{
+		 				autoShow:true,
+		 				title:'waiting...'
+		 			},
+		 			extras:{
+		 			}
+		 		});
+		 	});
+		 	mui('#shop').on('tap','a',function() {
+//		 		var titleName = this.getAttribute('title');
+//		 		var headerImg = this.querySelector('img').getAttribute('src');
+		 		mui.openWindow({
+		 			url:'gouwu.html',
+		 			id:'gouwu.html',
 		 			
 		 			show:{
 		 				autoShow:true,

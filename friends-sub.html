@@ -153,6 +153,14 @@
 	</style>
 	<body>
 		<script src="js/mui.min.js"></script>
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+		  <div class="mui-scroll">
+		    <!--数据列表-->
+		    <ul class="mui-table-view mui-table-view-chevron">
+		      
+		    </ul>
+		  </div>
+		</div>
 		<header class="mui-bar mui-bar-nav">
 		    <img src="images/4.jpg" width="100%"/>
 		    <div class="user">
@@ -259,10 +267,10 @@
 		
 	</body>
 	<script type="text/javascript">
-		mui.init();
-		new Vue({
+		var vm = new Vue({
 			el: '#app',
 		    data: {
+		    		new_data: [],
 		        friends: [
 		        		{	
 		        			args: {
@@ -310,6 +318,7 @@
 	        					},
 	        				]
 		        		},
+		        		
 		        ]
 		    },
 		    methods: {
@@ -358,6 +367,36 @@
 		    computed: {
 		    },
 		});
+		mui.init({
+//			subpages:[{
+//		      url: 'refresh.html',//下拉刷新内容页面地址
+//		      id: 'refresh.html',//内容页面标志
+//		      styles:{
+//		        top: '48px',//内容页面顶部位置,需根据实际页面布局计算，若使用标准mui导航，顶部默认为48px；
+//		      }
+//		    }],
+		    pullRefresh : {
+			    container:"#refreshContainer",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+			    down : {
+			      height:50,//可选,默认50.触发下拉刷新拖动距离,
+			      auto: true,//可选,默认false.自动下拉刷新一次
+			      contentdown : "下拉可以刷新",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+			      contentover : "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+			      contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+			      callback : pullfresh_function, //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+			    }
+			  },
+		});
+		function pullfresh_function() {
+		     //业务逻辑代码，比如通过ajax从服务器获取新数据
+		     friends = JSON.parse(plus.storage.getItem('friends'));
+		     console.log(friends);
+		     for(var i=0; i < friends.length; i++){
+		     	vm.friends.unshift(friends[i]);
+		     }
+		     //注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+		     mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+		};
 	</script>
 
 </html>
