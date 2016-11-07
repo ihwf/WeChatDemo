@@ -16,6 +16,7 @@
 		<header class="mui-bar mui-bar-nav">
 	        <a class="mui-action-back mui-icon mui-icon-arrowthinleft mui-pull-left"></a>
 	        <h1 class="mui-title">详细资料</h1>
+	        <span id="openPopover" class="mui-icon mui-icon-bars mui-pull-right" style="color: white;"></span>
 	    </header>
 	    
 	    <div class="mui-content">
@@ -50,13 +51,16 @@
 			        </a>
 			    </li>
 			    <li class="mui-table-view-cell mui-media">
-			        <a href="javascript:;">
+			        <a  href="#popover" id="openPopover">
 			           <div class="mui-media-body">
 			                更多
 			            </div>
 			        </a>
 			    </li>
+			  
 		   </ul>
+		   
+		   
 		   
 			
 			<button type="button" class="mui-btn mui-btn-success">发消息</button>
@@ -94,6 +98,18 @@
 			 			}
 			 		})
 				});
+		document.querySelector('#openPopover').addEventListener('click',function () {
+			// 弹出系统选择按钮框
+	plus.nativeUI.actionSheet( {title:"设置备注及标签",cancel:"取消",buttons:[{title:"标为星标朋友"},{title:"发送该名片"},{title:"投诉"},{title:"加入黑名单"},{title:"删除"},{title:"添加到桌面"}]}, function(e){
+		console.log( "User pressed: "+e.index );
+	} );
+		});
+//	
+//if(window.plus){
+//	plusReady();
+//}else{
+//	document.addEventListener("plusready",plusReady,false);
+//}
 			})
 		</script>
 	</body>

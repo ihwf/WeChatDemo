@@ -416,7 +416,7 @@
 	//显示更多
 	document.querySelector('.mui-icon-plus').addEventListener('tap',function(){
 		if(document.querySelector('#Gallery').style.display == 'none'){
-			document.querySelector('footer').style.bottom = '237px';
+			document.querySelector('footer').style.bottom = '40%';
 			document.querySelector('#biaoqingbao').style.display = 'none';
 			document.querySelector('#Gallery').style.display = 'block';
 			ui.boxMsgText.blur();
@@ -432,7 +432,7 @@
 		if (this.classList.contains('icon-biaoqing')) {
 			this.classList.add('jianpan');
 			this.classList.remove('icon-biaoqing');
-			document.querySelector('footer').style.bottom = '27%';
+			document.querySelector('footer').style.bottom = '28%';
 			document.querySelector('#biaoqingbao').style.display = 'block';
 			document.querySelector('#Gallery').style.display = 'none';
 			

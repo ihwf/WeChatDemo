@@ -622,6 +622,28 @@
 					plus.webview.getWebviewById('Contacts.html').hide();
 					plus.webview.show('Chats.html','slide-in-left',100);
 			     });
+			     mui('.mui-media').on('tap','a',function () {
+			     	var chatName = this.title;
+			     	var header = this.querySelector('img').getAttribute('src');
+			     	mui.openWindow({
+		 			url:'chats/moreInfo.html',
+		 			id:'chsts/moreInfo.html',
+		 			
+		 			show:{
+		 				autoShow:true,
+		 				aniShow:'slide-in-right',
+		 				duration:100
+		 			},
+		 			waiting:{
+		 				autoShow:true,
+		 				title:'waiting...'
+		 			},
+		 			extras:{
+		 				chatHeader:header,
+		 				chatName:chatName
+		 			}
+		 		})
+			     });
 			});
 		</script>
 	</body>

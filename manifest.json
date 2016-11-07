@@ -533,7 +533,8 @@
 					"css/iconfont.css",
 					"css/mui.min.css",
 					"images/cbd.jpg",
-					"images/shuijiao.jpg"
+					"images/shuijiao.jpg",
+					"images/muwu.jpg"
 				],
 				"refer": [
 					"chats/chatView.html"
